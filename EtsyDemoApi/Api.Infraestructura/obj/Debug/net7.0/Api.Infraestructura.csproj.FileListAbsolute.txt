@@ -1,0 +1,14 @@
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\bin\Debug\net7.0\Api.Infraestructura.deps.json
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\bin\Debug\net7.0\Api.Infraestructura.dll
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\bin\Debug\net7.0\Api.Infraestructura.pdb
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.csproj.AssemblyReference.cache
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.AssemblyInfoInputs.cache
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.AssemblyInfo.cs
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.csproj.CoreCompileInputs.cache
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.dll
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\refint\Api.Infraestructura.dll
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.pdb
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\ref\Api.Infraestructura.dll
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\bin\Debug\net7.0\Api.Infraestructura.runtimeconfig.json
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Infraestructura\obj\Debug\net7.0\Api.Infraestructura.genruntimeconfig.cache
