@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Api.Infraestructura.Models
 {
@@ -8,17 +8,38 @@ namespace Api.Infraestructura.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [JsonProperty("id")]
         public int ProductId { get; set; }
+        [JsonProperty("title")]
         public string Title { get; set; } = "";
+        [JsonProperty("price")]
+        public decimal Price { get; set; }
+        [JsonProperty("category")]
+        public string Category { get; set; } = "";
+        [JsonProperty("description")]
         public string Description { get; set; } = "";
-        public decimal Price { get; set; } 
+        [JsonProperty("image")]
+        public string Image { get; set; } = "";
+        [JsonProperty("rating")]
+        public ProductRating Rating { get; set; } = new ProductRating();
         public string ProductGuid { get; set; } =  Guid.NewGuid().ToString(); //valor númerico (Global Unique Identifier) aunque se guarda en string
-                                                                               // Clave foránea de Shop
-        public int ShopId { get; set; }
+                                                                              // Clave foránea de Shop
 
-        // Propiedad de navegación hacia Shop
-        [ForeignKey("ShopId")]
-        [JsonIgnore]
-        public Shop? Shop { get; set; }
+    
+        //public int ShopId { get; set; }
+
+        //// Propiedad de navegación hacia Shop
+        //[ForeignKey("ShopId")]
+        //[JsonIgnore]
+        //public Shop? Shop { get; set; }
+    }
+    public class ProductRating
+    {
+        [JsonProperty("rate")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public double Rate { get; set; }
+        [JsonProperty("count")]
+        public int Count { get; set; }
     }
 }

@@ -1,10 +1,12 @@
 
-using Api.Service.Etsy;
+
 using Api.Infraestructura.Context;
 using dotenv.net;
 using Microsoft.EntityFrameworkCore;
 using Api.Data.Repository.Commands;
 using Api.Data.Repository.Queries;
+using Api.Service.Commands;
+using Api.Service.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +17,14 @@ var config = builder.Configuration;
 // Add services to the container.
 
 // Add Configuración Cliente HTTP
-builder.Services.AddHttpClient("etsyClient", client =>
+//builder.Services.AddHttpClient("etsyClient", client =>
+//{
+//    client.BaseAddress = new Uri("https://openapi.etsy.com/v3/application/");
+//    // Configura aquí otros aspectos como headers si es necesario
+//});
+builder.Services.AddHttpClient("FakeStoreClient", client =>
 {
-    client.BaseAddress = new Uri("https://openapi.etsy.com/v3/application/");
-    // Configura aquí otros aspectos como headers si es necesario
+    client.BaseAddress = new Uri("https://fakestoreapi.com/");
 });
 
 // Add DB
@@ -27,9 +33,10 @@ builder.Services.AddDbContext<ApiContext>(options =>
 
 
 //Add EtsyService
-builder.Services.AddTransient<IEtsyService, EtsyService>();
 builder.Services.AddTransient<IEtsyRepository, EtsyRepository>();
 builder.Services.AddTransient<IEtsyQuery, EtsyQuery>();
+builder.Services.AddTransient<ICreateEtsyService, CreateEtsyService>();
+builder.Services.AddTransient<IGetEtsyService, GetEtsyService>();
 
 
 builder.Services.AddControllers();

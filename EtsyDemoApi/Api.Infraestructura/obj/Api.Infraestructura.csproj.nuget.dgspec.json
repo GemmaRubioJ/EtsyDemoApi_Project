@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj": {}
+    "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj": {
+    "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj",
+        "projectUniqueName": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj",
         "projectName": "Api.Infraestructura",
-        "projectPath": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj",
+        "projectPath": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\Api.Infraestructura.csproj",
         "packagesPath": "C:\\Users\\gare\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi\\Api.Infraestructura\\obj\\",
+        "outputPath": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gare\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,6 +58,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.18, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

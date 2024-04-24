@@ -5,38 +5,146 @@ using Api.Infraestructura.Context;
 using Api.Infraestructura.Models;
 using Azure;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.Net.Http.Json;
+using System.Text.Json;
 
 namespace Api.Data.Repository.Queries
 {
     public class EtsyQuery : EtsyRepositoryBase, IEtsyQuery
     {
-        public EtsyQuery(ApiContext context) : base(context) { }
+        public EtsyQuery(ApiContext context, HttpClient httpclient) : base(context, httpclient) { }
 
-        public async Task<ResponseShops> GetShopsAsync()
+
+
+        //public async Task<ResponseShops> GetShopsAsync()
+        //{
+        //    try
+        //    {
+        //        List<Shop> shops = await _context.Shops.Include(shop => shop.Products).ToListAsync();
+        //        if (!shops.Any())
+        //        {
+        //            _responseShops.Status = StatusType.ERROR;
+        //            _responseShops.Message = "Error al recolectar las tiendas";
+        //            return _responseShops;
+        //        }
+        //        else
+        //        {
+        //            _responseShops.Status = StatusType.SUCCESS;
+        //            _responseShops.Message = "Tiendas recolectadas exitosamente";
+        //            _responseShops.Data = shops;
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _responseShops.Message += ex.Message;
+        //        _responseShops.Status = StatusType.ERROR;
+        //    }
+        //    return _responseShops;
+        //}
+
+
+        //public async Task<ResponseShops> GetShopsByNameAsync(string name)
+        //{
+        //    try
+        //    {
+        //        IEnumerable<Shop> shops =  await _context.Shops.Where(shop => shop.Name.Contains(name)).ToListAsync();
+        //        if (!shops.Any())
+        //        {
+        //            _responseShops.Status = StatusType.ERROR;
+        //            _responseShops.Message = "Error al recolectar las tiendas";
+        //            return _responseShops;
+        //        }
+        //        else
+        //        {
+        //            _responseShops.Status = StatusType.SUCCESS;
+        //            _responseShops.Message = "Tiendas recolectadas exitosamente";
+        //            _responseShops.Data = shops;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _responseShops.Message += ex.Message;
+        //        _responseShops.Status = StatusType.ERROR;
+        //    }
+        //    return _responseShops;
+        //}
+
+
+        public async Task<ResponseProducts> GetProductsByNameAsync(string name)
         {
             try
             {
-                List<Shop> shops = await _context.Shops.Include(shop => shop.Products).ToListAsync();
-                if (!shops.Any())
+                HttpResponseMessage httpResponse = await _httpClient.GetAsync("https://fakestoreapi.com/products");
+                if (httpResponse.IsSuccessStatusCode)
                 {
-                    _responseShops.Status = StatusType.ERROR;
-                    _responseShops.Message = "Error al recolectar las tiendas";
-                    return _responseShops;
+                    var json = await httpResponse.Content.ReadAsStringAsync();
+                    var products = JsonConvert.DeserializeObject<IEnumerable<Product>>(json);
+                    products = products.Where(p => p.Title.Contains(name, StringComparison.OrdinalIgnoreCase));
+                    if (!products.Any())
+                    {
+                        _responseProducts.Status = StatusType.ERROR;
+                        _responseProducts.Message = "Error al recolectar los productos";
+                        return _responseProducts;
+                    }
+                    else
+                    {
+                        _responseProducts.Status = StatusType.SUCCESS;
+                        _responseProducts.Message = "Productos recolectados exitosamente";
+                        _responseProducts.Data = products;
+                    }
                 }
                 else
                 {
-                    _responseShops.Status = StatusType.SUCCESS;
-                    _responseShops.Message = "Tiendas recolectadas exitosamente";
-                    _responseShops.Data = shops;
+                    _responseProducts.Status = StatusType.ERROR;
+                    _responseProducts.Message = "Error en la respuesta de la API";
                 }
-
             }
             catch (Exception ex)
             {
-                _responseShops.Message += ex.Message;
-                _responseShops.Status = StatusType.ERROR;
+                _responseProducts.Message += ex.Message;
+                _responseProducts.Status = StatusType.ERROR;
             }
-            return _responseShops;
+            return _responseProducts;
+        }
+
+
+        public async Task<ResponseProducts> GetAllProductsAsync()
+        {
+            try
+            {
+                HttpResponseMessage httpResponse = await _httpClient.GetAsync("https://fakestoreapi.com/products");
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    var json = await httpResponse.Content.ReadAsStringAsync();
+                    var products = JsonConvert.DeserializeObject<IEnumerable<Product>>(json);
+                    if (!products.Any())
+                    {
+                        _responseProducts.Status = StatusType.ERROR;
+                        _responseProducts.Message = "Error al recolectar los productos";
+                        return _responseProducts;
+                    }
+                    else
+                    {
+                        _responseProducts.Status = StatusType.SUCCESS;
+                        _responseProducts.Message = "Productos recolectados exitosamente";
+                        _responseProducts.Data = products;
+                    }
+                }
+                else
+                {
+                    _responseProducts.Status = StatusType.ERROR;
+                    _responseProducts.Message = "Error en la respuesta de la API";
+                }
+            }
+            catch (Exception ex)
+            {
+                _responseProducts.Message += ex.Message;
+                _responseProducts.Status = StatusType.ERROR;
+            }
+            return _responseProducts;
         }
     }
+    
 }

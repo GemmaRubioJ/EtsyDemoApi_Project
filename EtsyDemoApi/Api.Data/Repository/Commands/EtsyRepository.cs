@@ -10,7 +10,7 @@ namespace Api.Data.Repository.Commands
 {
     public class EtsyRepository : EtsyRepositoryBase, IEtsyRepository
     {
-        public EtsyRepository(ApiContext context) : base(context) { }
+        public EtsyRepository(ApiContext context, HttpClient httpClient) : base(context, httpClient) { }
 
 
         public async Task<Response> CreateShopAsync(CreateRequest createRequest)
@@ -63,7 +63,7 @@ namespace Api.Data.Repository.Commands
                         Title = createRequest.Title,
                         Description = createRequest.Description,
                         Price = createRequest.Price,
-                        ShopId = createRequest.ShopId,
+                        //ShopId = createRequest.ShopId,
                     };
                     _context.Products.Add(product);
                     _response.Message = "Se añadió el Producto correctamente";

@@ -13,10 +13,13 @@ namespace Api.Data.SeedWork
         protected readonly ResponseProducts _responseProducts = new  ResponseProducts() { Status = StatusType.SUCCESS };
 
         protected readonly ApiContext _context;
+        protected readonly HttpClient? _httpClient;
 
-        public EtsyRepositoryBase(ApiContext context)
+        public EtsyRepositoryBase(ApiContext context, HttpClient? httpClient)
         {
             _context = context;
+            _httpClient = httpClient;
+
         }
     }
 }
