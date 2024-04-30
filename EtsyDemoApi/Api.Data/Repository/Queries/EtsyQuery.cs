@@ -13,8 +13,7 @@ namespace Api.Data.Repository.Queries
 {
     public class EtsyQuery : EtsyRepositoryBase, IEtsyQuery
     {
-        public EtsyQuery(ApiContext context, HttpClient httpclient) : base(context, httpclient) { }
-
+        public EtsyQuery( HttpClient httpclient, ApiContext context) : base( httpclient, context) { }
 
 
         //public async Task<ResponseShops> GetShopsAsync()
@@ -72,6 +71,16 @@ namespace Api.Data.Repository.Queries
         //}
 
 
+
+
+        /// <summary>
+        /// Recupera todos los productos disponibles de la API externa.
+        /// Este método realiza una solicitud HTTP GET a la API y deserializa la respuesta en una lista de productos.
+        /// Si la respuesta es exitosa y contiene productos, retorna un estado de éxito con los productos;
+        /// de lo contrario, retorna un estado de error con un mensaje apropiado.
+        /// </summary>
+        /// <returns>Una tarea que resulta en un objeto ResponseProducts que contiene el estado de la operación,
+        /// los productos recuperados y un mensaje descriptivo.</returns>
         public async Task<ResponseProducts> GetProductsByNameAsync(string name)
         {
             try
@@ -109,7 +118,14 @@ namespace Api.Data.Repository.Queries
             return _responseProducts;
         }
 
-
+        /// <summary>
+        /// Busca productos por nombre en la API externa.
+        /// Realiza una solicitud HTTP GET, filtra los productos por el nombre proporcionado y maneja la respuesta.
+        /// Si no encuentra productos con el nombre especificado, retorna un error; si encuentra, retorna éxito.
+        /// </summary>
+        /// <param name="name">El nombre del producto a buscar.</param>
+        /// <returns>Una tarea que resulta en un objeto ResponseProducts que contiene el estado de la operación,
+        /// los productos filtrados y un mensaje descriptivo.</returns>
         public async Task<ResponseProducts> GetAllProductsAsync()
         {
             try

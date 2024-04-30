@@ -5,8 +5,9 @@ using dotenv.net;
 using Microsoft.EntityFrameworkCore;
 using Api.Data.Repository.Commands;
 using Api.Data.Repository.Queries;
-using Api.Service.Commands;
+
 using Api.Service.Queries;
+using Api.Data.Repository.Queries.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,9 +34,10 @@ builder.Services.AddDbContext<ApiContext>(options =>
 
 
 //Add EtsyService
-builder.Services.AddTransient<IEtsyRepository, EtsyRepository>();
+//builder.Services.AddTransient<IEtsyRepository, EtsyRepository>();
 builder.Services.AddTransient<IEtsyQuery, EtsyQuery>();
-builder.Services.AddTransient<ICreateEtsyService, CreateEtsyService>();
+//builder.Services.AddTransient<ICreateEtsyService, CreateEtsyService>();
+builder.Services.AddTransient<IUserQuery, UserQuery>();
 builder.Services.AddTransient<IGetEtsyService, GetEtsyService>();
 
 

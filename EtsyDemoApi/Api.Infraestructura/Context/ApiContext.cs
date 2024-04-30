@@ -16,6 +16,7 @@ namespace Api.Infraestructura.Context
         }
 
         public DbSet<Product> Products{ get; set; }
-        public DbSet<Shop> Shops { get; set; }
+        public DbSet<User> Users { get; set; }
+
     }
 }

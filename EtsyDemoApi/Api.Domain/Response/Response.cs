@@ -17,8 +17,8 @@ namespace Api.Domain.Response
 
     // Clase específica para respuestas que incluyen otros tipos de dato
     public class ResponseProducts : Response<IEnumerable<Product>> { }
-    public class ResponseShops : Response<IEnumerable<Shop>> { }
     public class ResponseProduct : Response<Product> { }
-    public class ResponseShop : Response<Shop> { }
+    public class ResponseUsers : Response <IEnumerable<User>> { }
+    public class ResponseUser : Response<User> { } 
 
 }

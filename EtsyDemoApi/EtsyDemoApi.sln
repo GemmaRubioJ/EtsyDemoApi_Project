@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Service", "Api.Service\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Domain", "Api.Domain\Api.Domain.csproj", "{0BCE6F65-F3B9-47A2-821F-E273D790D2CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Data", "Api.Data\Api.Data.csproj", "{682B6F29-0768-4976-B99F-F3098B96AA3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Data", "Api.Data\Api.Data.csproj", "{682B6F29-0768-4976-B99F-F3098B96AA3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Test", "Api.Etsy.Test\Api.Test.csproj", "{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{682B6F29-0768-4976-B99F-F3098B96AA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{682B6F29-0768-4976-B99F-F3098B96AA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{682B6F29-0768-4976-B99F-F3098B96AA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
