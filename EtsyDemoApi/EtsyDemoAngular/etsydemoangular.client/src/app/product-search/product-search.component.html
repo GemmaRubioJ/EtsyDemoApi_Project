@@ -1,0 +1,14 @@
+<header class="etsy-header">
+  <div class="header-content">
+    <a href="/" class="logo-link">
+      <img src="assets/1.png" alt="Logo" class="logo">
+    </a>
+    <div class="search-container">
+      <input type="text" #searchInput (keyup)="searchProducts(searchInput.value)" placeholder="Buscar productos..." class="search-input">
+    </div>
+    <nav class="header-nav">
+      <a routerLink="/login" routerLinkActive="active-link">Log In</a>
+      <a routerLink="/register" routerLinkActive="active-link">Registro</a>
+    </nav>
+  </div>
+</header>

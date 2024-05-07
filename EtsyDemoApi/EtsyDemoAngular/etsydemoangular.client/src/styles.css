@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importación de Bootstrap */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* Importación de Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+/* Estilos básicos del cuerpo y HTML */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Uso de Roboto como la fuente principal */
+}

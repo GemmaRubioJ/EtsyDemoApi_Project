@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:4200",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\EtsyDemoAngular.Server\\..\\etsydemoangular.client",
+"MaxTimeoutInSeconds": "120"
+}
+}

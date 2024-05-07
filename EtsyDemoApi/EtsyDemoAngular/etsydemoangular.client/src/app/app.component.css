@@ -1,0 +1,71 @@
+/* styles.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1; /* Esto hace que el contenido expanda para empujar el footer hacia abajo */
+  padding-top: 90px; /* Ajusta este valor según la altura del header */
+  width: 100%;
+}
+
+/* Estilos para el contenido adicional */
+.additional-content {
+  max-width: 100%; /* Controla el ancho máximo para mejor legibilidad */
+  margin: 0 auto; /* Centra el contenido */
+  padding: 20px 5% ; /* Agrega algo de espaciado interno */
+}
+
+  .additional-content .row {
+    width: 100%; /* Usa todo el ancho del contenedor */
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+  }
+
+  .additional-content .col {
+    flex: 1; /* Distribuye el espacio disponible equitativamente */
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Organiza los hijos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente si es necesario */
+    padding: 20px; /* Espaciado interno para cada columna */
+    text-align: center; /* Alinea el texto al centro */
+  }
+
+  .additional-content p {
+    font-family: 'Arial', sans-serif; /* Fuente más legible */
+    color: #333; /* Color oscuro para mejor contraste */
+    font-size: 16px; /* Tamaño adecuado para la legibilidad */
+    line-height: 1.6; /* Espacio vertical entre líneas de texto */
+    text-align: center; /* Justifica el texto para un look más pulido */
+  }
+
+  /* Estilos para títulos dentro de las columnas, si es necesario */
+  .additional-content .col h2 {
+    font-size: 20px; /* Tamaño más grande para títulos */
+    color: #444; /* Color ligeramente más oscuro para los títulos */
+    margin-bottom: 10px; /* Espacio después del título */
+  }
+
+/* Estilos específicos para resaltar ciertas palabras o frases */
+.important {
+  color: #f57c00; /* Un color destacado para cosas importantes */
+  font-weight: bold; /* Hacerlo negrita para destacar */
+}
+
+/* Ajustes de las imágenes para alinear con el texto */
+.promo-logo, .promo-offer {
+  width: 100%; /* Ajusta las imágenes al tamaño de su contenedor */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+}

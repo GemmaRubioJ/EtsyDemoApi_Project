@@ -1,0 +1,23 @@
+<div class="modal-overlay">
+  <div class="modal-content p-4">
+    <div *ngIf="product">
+      <button class="close-button" (click)="closeDialog()">&times;</button>
+      <img class="card-img-top" [src]="product?.image" alt="Product image">
+      <h1 class="text-center mb-3">{{ product?.title }}</h1>
+      <p class="mb-2">{{ product?.description }}</p>
+      <p class="font-weight-bold">Precio: {{ product?.price | currency }}</p>
+      <button>Añadir al carrito</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="!product">
+  <p>Cargando detalles del producto...</p>
+</div>
+
+
+
+
+
+
+
+

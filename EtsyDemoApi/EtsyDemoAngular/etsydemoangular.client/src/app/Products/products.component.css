@@ -1,0 +1,81 @@
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 15px; /* Margen alrededor de las tarjetas */
+  overflow: hidden; /* Asegura que todos los elementos interiores se ajusten al borde redondeado */
+  cursor: pointer; /* Cambia el cursor a un puntero para indicar que es clickeable */
+  transition: transform 0.3s ease-in-out; /* Suaviza la transformación */
+}
+
+  .card:hover {
+    transform: scale(1.05); /* Efecto al pasar el ratón por encima */
+  }
+
+.card-img-top {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: contain; /* Asegura que la imagen cubra completamente el espacio asignado sin distorsionarse */
+
+}
+
+.card-header {
+  background-color: #ffffff; /* Fondo más claro para el encabezado */
+  border-bottom: 2px solid #eeeeee; /* Borde más notorio */
+  margin-top: 5px;
+  padding: 17px; /* Más espacio interno */
+  font-size: 18px; /* Texto más grande para el título */
+  height: 60px; /* Altura fija para todos los encabezados de tarjeta */
+  display: flex; /* Flexbox para centrar el contenido verticalmente */
+  align-items: center; /* Alinea el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente si es necesario */
+}
+
+  .card-header h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita el texto a dos líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto; /* Permite que el encabezado crezca según el contenido, hasta un límite */
+    max-height: 60px; /* Establece una altura máxima para el encabezado */
+  }
+
+.card-body {
+  padding: 20px;
+  color: #333; /* Color de texto oscuro para mejor contraste */
+  line-height: 1.6; /* Espaciado de línea para mejor legibilidad */
+}
+
+.card-price {
+  font-weight: bold;
+  color: #EC902E; /* Un color llamativo para el precio */
+  font-size: 20px; /* Tamaño de fuente más grande */
+  margin-bottom: 10px; /* Espacio antes del próximo elemento */
+}
+
+/* Estilos para los botones de categoría */
+.category-buttons {
+  display: flex; /* Usa Flexbox para alinear los botones */
+  justify-content: center; /* Centra los botones horizontalmente */
+  padding: 20px; /* Espaciado alrededor de los botones */
+  gap: 10px; /* Espacio entre botones */
+}
+
+.category-button {
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  border-radius: 20px; /* Bordes muy redondeados */
+  border: 2px solid transparent; /* Borde transparente, necesario para el efecto de hover */
+  background-color: white; /* Fondo blanco inicial */
+  color: #333; /* Color de texto oscuro para contraste */
+  cursor: pointer; /* Indica que el elemento es clickeable */
+  transition: all 0.3s ease; /* Transición suave para efectos de hover */
+  text-transform: uppercase; /* Texto en mayúsculas para más impacto */
+  letter-spacing: 1px; /* Espacio entre letras para mejor legibilidad */
+}
+
+  .category-button:hover, .category-button:focus {
+    background-color: #E09648; /* Naranja con transparencia */
+    color: white;
+    border-color: #F2C698;
+  }

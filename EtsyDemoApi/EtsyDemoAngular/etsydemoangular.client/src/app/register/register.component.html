@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <br/><br /><br /> <br />
+  <div class="form-container">
+    <h2>Registro</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <!-- Columna izquierda para name, address y phone -->
+        <div class="col-md-6">
+          <div formGroupName="name">
+            <label for="firstName">First Name *</label>
+            <input type="text" formControlName="firstName" id="firstName" placeholder="First Name">
+            <label for="lastName">Last Name *</label>
+            <input type="text" formControlName="lastName" id="lastName" placeholder="Last Name">
+          </div>
+
+          <div formGroupName="address">
+            <label for="city">City </label>
+            <input type="text" formControlName="city" id="city" placeholder="City">
+            <label for="street">Street </label>
+            <input type="text" formControlName="street" id="street" placeholder="Street">
+            <label for="number">Number </label>
+            <input type="text" formControlName="number" id="number" placeholder="Number">
+            <label for="zipcode">Zipcode </label>
+            <input type="text" formControlName="zipcode" id="zipcode" placeholder="Zipcode">
+          </div>
+
+          <label for="phone">Phone </label>
+          <input type="text" formControlName="phone" id="phone" placeholder="Phone">
+        </div>
+
+        <!-- Columna derecha para email, username y password -->
+        <div class="col-md-6 right-col">
+          <div class="user-details">
+            <label for="email">Email *</label>
+            <input type="email" formControlName="email" id="email" placeholder="Email">
+
+            <label for="username">Username *</label>
+            <input type="text" formControlName="username" id="username" placeholder="Username">
+
+            <label for="password">Password *</label>
+            <input type="password" formControlName="password" id="password" placeholder="Password">
+            <label for="confirmPassword">Confirm Password *</label>
+            <input type="password" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+          </div>
+          <div class="submit-btn-container">
+            <button type="submit" [disabled]="!registerForm.valid">Register</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

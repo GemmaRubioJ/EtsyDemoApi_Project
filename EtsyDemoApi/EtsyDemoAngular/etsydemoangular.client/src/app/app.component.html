@@ -1,0 +1,44 @@
+<!-- app.component.html -->
+<div class="main-container">
+  <app-product-search></app-product-search>
+
+  <!-- Contenido principal de la página -->
+  <div class="page-content">
+    <router-outlet></router-outlet>
+
+    <!-- Promo banner y contenido adicional controlados por showBanner -->
+    <div *ngIf="showBanner">
+      <app-promo-banner (buyClicked)="toggleDisplay()"></app-promo-banner>
+      <div class="additional-content">
+        <div class="row">
+          <div class="col">
+            <img src="assets/fondoDerecha.jpg" alt="Logo" class="promo-logo">
+          </div>
+          <div class="col">
+            <h2>Quienes somos</h2>
+            <p> Somos una empresa dedicada a ofrecer los mejores productos y ofertas a nuestros clientes, comprometidos con la calidad y el servicio.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>Las mejores ofertas</h2>
+            <p> Encuentra productos increíbles a precios inmejorables, descubre nuestras promociones y descuentos exclusivos.</p>
+          </div>
+          <div class="col">
+            <img src="assets/logoNaranja.png" alt="Special Offer" class="promo-offer">
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </div>
+
+    <!-- Componente de productos visible basado en showProducts -->
+    <br /><br />
+    <app-products *ngIf="showProducts"></app-products>
+  </div>
+
+  <!-- Footer al final -->
+  <br /><br />
+  <app-footer></app-footer>
+</div>
+
