@@ -65,8 +65,19 @@ namespace EtsyDemoApi.Controllers
             return await _getEtsyService.GetProductsAsync();
             }
 
-            //GET TODOS USUARIOS FAKE STORE API
-            [HttpGet("users/all")]
+            //GET PRODUCTO POR ID FAKE STORE API
+            [HttpGet("products/{id}")]
+            [SwaggerOperation("Buscar producto por id")]
+            [ProducesResponseType(typeof(Product), 200)]
+            [ProducesResponseType(StatusCodes.Status400BadRequest)]
+            [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+            public async Task<Response> GetAllProducts(int id)
+            {
+                return await _getEtsyService.GetProductByIdAsync(id);
+            }
+
+        //GET TODOS USUARIOS FAKE STORE API
+        [HttpGet("users/all")]
             [SwaggerOperation("Buscar todos los usuarios")]
             [ProducesResponseType(typeof(List<User>), 200)]
             [ProducesResponseType(StatusCodes.Status400BadRequest)]

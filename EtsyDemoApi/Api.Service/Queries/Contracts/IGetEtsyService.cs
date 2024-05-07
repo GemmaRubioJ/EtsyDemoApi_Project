@@ -10,5 +10,6 @@ namespace Api.Service.Queries
         //Task<Response> GetShopsByNameAsync(string name);
         Task<ResponseProducts> GetProductsAsync();
         Task<ResponseUsers> GetUsersAsync();
+        Task<ResponseProduct> GetProductByIdAsync(int id);
     }
 }

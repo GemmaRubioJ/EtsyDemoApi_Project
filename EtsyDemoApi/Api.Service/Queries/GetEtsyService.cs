@@ -130,5 +130,17 @@ namespace Api.Service.Queries
 
             return response;
         }
+
+
+        public async Task<ResponseProduct> GetProductByIdAsync(int id)
+        {
+            ResponseProduct response = new ResponseProduct { Status = StatusType.SUCCESS };
+            if (response.Status == StatusType.ERROR)
+            {
+                return response;
+            }
+            response = await _etsyQuery.GetProductByIdAsync(id);
+            return response;
+        }
     }
 }

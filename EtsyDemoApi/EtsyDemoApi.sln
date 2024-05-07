@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Domain", "Api.Domain\Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Data", "Api.Data\Api.Data.csproj", "{682B6F29-0768-4976-B99F-F3098B96AA3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Test", "Api.Etsy.Test\Api.Test.csproj", "{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Test", "Api.Etsy.Test\Api.Test.csproj", "{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "etsydemoangular.client", "EtsyDemoAngular\etsydemoangular.client\etsydemoangular.client.esproj", "{7C5881E8-6C66-45F9-BD4C-36340E012AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,12 @@ Global
 		{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5663478C-FAC2-4938-8A56-9B9B8DE1C6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5881E8-6C66-45F9-BD4C-36340E012AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5881E8-6C66-45F9-BD4C-36340E012AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5881E8-6C66-45F9-BD4C-36340E012AFD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7C5881E8-6C66-45F9-BD4C-36340E012AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5881E8-6C66-45F9-BD4C-36340E012AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5881E8-6C66-45F9-BD4C-36340E012AFD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

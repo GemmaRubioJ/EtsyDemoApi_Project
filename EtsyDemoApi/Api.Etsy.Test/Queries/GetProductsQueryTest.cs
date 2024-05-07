@@ -1,17 +1,11 @@
-﻿
-using Api.Data.Repository.Commands;
-using Api.Data.Repository.Queries;
+﻿using Api.Data.Repository.Queries;
+using Api.Data.Repository.Queries.Contracts;
 using Api.Domain.Enum;
 using Api.Domain.Response;
-using Api.Infraestructura.Context;
 using Api.Infraestructura.Models;
 using Api.Service.Queries;
-using Castle.Core.Configuration;
-using Microsoft.Extensions.Configuration;
 using Moq;
-using Moq.Protected;
-using System.Net;
-using System.Net.Http;
+
 
 namespace Api.Test.Queries
 {
@@ -21,10 +15,12 @@ namespace Api.Test.Queries
         private readonly EtsyQuery? _etsyQuery;
         private readonly UserQuery? _userQuery;
         private readonly Mock<IEtsyQuery> _mockEtsyQuery;
+        private readonly Mock<IUserQuery> _mockUserQuery;
 
         public GetProductsQueryTest()
         {
             _mockEtsyQuery = new Mock<IEtsyQuery>();
+            _mockUserQuery = new Mock<IUserQuery>();
             _getEtsyService = new GetEtsyService(_etsyQuery, _userQuery);
             _mockEtsyQuery.Setup(x => x.GetAllProductsAsync())
                       .ReturnsAsync(new ResponseProducts
@@ -39,7 +35,7 @@ namespace Api.Test.Queries
                       });
 
             // Instanciar GetEtsyService utilizando el mock de IEtsyQuery
-            _getEtsyService = new GetEtsyService(_mockEtsyQuery.Object);
+            _getEtsyService = new GetEtsyService(_mockEtsyQuery.Object, _mockUserQuery.Object);
         }
 
 

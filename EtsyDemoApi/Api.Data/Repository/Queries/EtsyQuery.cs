@@ -161,6 +161,42 @@ namespace Api.Data.Repository.Queries
             }
             return _responseProducts;
         }
+
+        public async Task<ResponseProduct> GetProductByIdAsync(int id)
+        {
+            try
+            {
+                HttpResponseMessage httpResponse = await _httpClient.GetAsync($"https://fakestoreapi.com/products/{id}");
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    var json = await httpResponse.Content.ReadAsStringAsync();
+                    var product = JsonConvert.DeserializeObject<Product>(json);
+                    if (product == null)
+                    {
+                        _responseProduct.Status = StatusType.ERROR;
+                        _responseProduct.Message = "No se encontró el producto";
+                        return _responseProduct;
+                    }
+                    else
+                    {
+                        _responseProduct.Status = StatusType.SUCCESS;
+                        _responseProduct.Message = "Producto recolectado exitosamente";
+                        _responseProduct.Data = product;
+                    }
+                }
+                else
+                {
+                    _responseProduct.Status = StatusType.ERROR;
+                    _responseProduct.Message = "Error en la respuesta de la API";
+                }
+            }
+            catch (Exception ex)
+            {
+                _responseProduct.Message += ex.Message;
+                _responseProduct.Status = StatusType.ERROR;
+            }
+            return _responseProduct;
+        }
     }
     
 }

@@ -1,11 +1,7 @@
-
-
 using Api.Infraestructura.Context;
 using dotenv.net;
 using Microsoft.EntityFrameworkCore;
-using Api.Data.Repository.Commands;
 using Api.Data.Repository.Queries;
-
 using Api.Service.Queries;
 using Api.Data.Repository.Queries.Contracts;
 
@@ -44,6 +40,15 @@ builder.Services.AddTransient<IGetEtsyService, GetEtsyService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
+// Configuración de CORS (FRONT ANGULAR)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
+
 //necesario para Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -57,7 +62,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
 

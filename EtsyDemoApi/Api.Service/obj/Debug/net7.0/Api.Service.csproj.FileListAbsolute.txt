@@ -20,6 +20,7 @@ C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi\Api.Service\b
 C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi_Project\EtsyDemoApi\Api.Service\bin\Debug\net7.0\Api.Service.deps.json
 C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi_Project\EtsyDemoApi\Api.Service\bin\Debug\net7.0\Api.Service.dll
 C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi_Project\EtsyDemoApi\Api.Service\bin\Debug\net7.0\Api.Service.pdb
+C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi_Project\EtsyDemoApi\Api.Service\bin\Debug\net7.0\Api.Service.xml
 C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi_Project\EtsyDemoApi\Api.Service\bin\Debug\net7.0\Api.Data.dll
 C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi_Project\EtsyDemoApi\Api.Service\bin\Debug\net7.0\Api.Domain.dll
 C:\Users\gare\OneDrive - GFT Technologies SE\Documents\EtsyDemoApi_Project\EtsyDemoApi\Api.Service\bin\Debug\net7.0\Api.Infraestructura.dll

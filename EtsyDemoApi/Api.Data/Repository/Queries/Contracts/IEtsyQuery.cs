@@ -8,5 +8,6 @@ namespace Api.Data.Repository.Queries
         //Task<ResponseShops> GetShopsByNameAsync(string name);
         Task<ResponseProducts> GetProductsByNameAsync(string name);
         Task<ResponseProducts> GetAllProductsAsync();
+        Task<ResponseProduct> GetProductByIdAsync(int id);
     }
 }
