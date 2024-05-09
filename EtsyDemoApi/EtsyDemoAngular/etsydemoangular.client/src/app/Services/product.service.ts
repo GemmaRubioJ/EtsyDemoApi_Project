@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { Product } from '../NewFolder/Product';
-import { ApiResponse } from '../NewFolder/ApiResponse';
+import { Product } from '../Models/Product';
+import { ApiResponse } from '../Models/ApiResponse';
 import { Router } from '@angular/router';
 
 @Injectable({

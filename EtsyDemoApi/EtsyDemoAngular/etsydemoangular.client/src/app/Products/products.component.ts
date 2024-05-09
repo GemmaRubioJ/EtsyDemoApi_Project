@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ProductService } from '../Services/product.service';
-import { Product } from '../NewFolder/Product';
+import { Product } from '../Models/Product';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -14,6 +14,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   private subscription!: Subscription;
+  maxPrice: number = 1000;
 
   constructor(private productService: ProductService, public dialog: MatDialog) { }
 
@@ -51,6 +52,17 @@ export class ProductsComponent implements OnInit, OnDestroy {
       this.filteredProducts = [...this.products];
     }
     console.log('Productos filtrados:', this.filteredProducts);
-  
+  }
+
+  filterByPrice(): void {
+    this.filteredProducts = this.products.filter(product => product.price <= this.maxPrice);
+  }
+
+  sortProducts(order: string): void {
+    if (order === 'asc') {
+      this.filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (order === 'desc') {
+      this.filteredProducts.sort((a, b) => b.price - a.price);
+    }
   }
 }

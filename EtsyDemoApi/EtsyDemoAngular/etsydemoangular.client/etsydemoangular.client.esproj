@@ -8,9 +8,9 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\etsydemoangular.client\</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="src\app\NewFolder\ApiProductResponse.ts" />
+    <None Remove="src\app\Models\ApiProductResponse.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\app\NewFolder\" />
+    <Folder Include="src\app\Models\" />
   </ItemGroup>
 </Project>

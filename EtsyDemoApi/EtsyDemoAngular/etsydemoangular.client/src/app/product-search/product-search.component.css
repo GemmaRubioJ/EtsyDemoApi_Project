@@ -34,12 +34,13 @@
   border-radius: 4px;
 }
 
-.header-nav a {
+.header-nav a, span {
   text-decoration: none;
   color: #333;
   margin-left: 15px;
   font-weight: bold;
 }
+
 
   .header-nav a:hover {
     color: #666;

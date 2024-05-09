@@ -4,6 +4,14 @@
   <button class="category-button" (click)="filterByCategory('women\'s clothing')">Ropa de Mujer</button>
   <button class="category-button" (click)="filterByCategory('jewelery')">Joyería</button>
   <button class="category-button" (click)="filterByCategory('electronics')">Electrónica</button>
+  <button class="category-button" (click)="sortProducts('asc')">Precio Asc.</button>
+  <button class="category-button" (click)="sortProducts('desc')">Precio Desc.</button>
+  <button class="category-button" (click)="ngOnInit()">Todo</button>
+</div>
+<div class="filter-section">
+  <label for="priceRange">Precio máximo:</label>
+  <input type="range" class="price-range-slider" id="priceRange" [(ngModel)]="maxPrice" (change)="filterByPrice()" min="0" max="1000" step="10">
+  <span class="price-display">{{maxPrice | currency}}</span>
 </div>
 <div *ngIf="filteredProducts.length > 0; else noProducts" class="container">
   <div class="row">

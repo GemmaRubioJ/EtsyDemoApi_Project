@@ -4,6 +4,10 @@
   color: #fff;
   padding: 20px 0;
   font-size: 14px;
+  width: 100%;
+  position: sticky; /* o sticky según tu necesidad */
+  bottom: 0;
+  left: 0;
 }
 
 .footer-content {

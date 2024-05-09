@@ -79,3 +79,71 @@
     color: white;
     border-color: #F2C698;
   }
+
+
+/* Ajustes de estilo para la sección del filtro de precio */
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+}
+
+/* Estilización general de la barra deslizante */
+.price-range-slider {
+  width: 300px; 
+  margin: 0 15px;
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 5px; 
+  background: #ccc; 
+  outline: none;
+}
+
+  /* Estilos para el control deslizante (thumb) */
+  .price-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #ccc; 
+    cursor: pointer;
+    margin-top: -6px; 
+  }
+
+  .price-range-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #ffffff; 
+    cursor: pointer;
+  }
+
+  /* Estilos para la parte rellena de la barra */
+  .price-range-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #E09648; 
+    border-radius: 5px;
+    border: none;
+  }
+
+/* Estilización del texto del precio */
+.price-display {
+  min-width: 80px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #E09648; 
+  background-color: #F3F3F3;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

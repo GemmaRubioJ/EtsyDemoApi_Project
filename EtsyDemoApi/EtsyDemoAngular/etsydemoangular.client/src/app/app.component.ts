@@ -21,6 +21,9 @@ export class AppComponent {
       if (event.url === '/register') {
         this.showBanner = false;
         this.showProducts = false;
+      } else if (event.url === '/login') {
+        this.showBanner = false;
+        this.showProducts = false;
       } else {
         this.showBanner = true;
         this.showProducts = false;

@@ -41,9 +41,12 @@
             <input type="password" formControlName="password" id="password" placeholder="Password">
             <label for="confirmPassword">Confirm Password *</label>
             <input type="password" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+            <div *ngIf="registerForm.hasError('mismatch', ['password', 'confirmPassword'])">
+              Las contraseñas no coinciden
+            </div>
           </div>
           <div class="submit-btn-container">
-            <button type="submit" [disabled]="!registerForm.valid">Register</button>
+            <button type="submit" [disabled]="false">Register</button>
           </div>
         </div>
       </div>

@@ -7,8 +7,10 @@
       <input type="text" #searchInput (keyup)="searchProducts(searchInput.value)" placeholder="Buscar productos..." class="search-input">
     </div>
     <nav class="header-nav">
-      <a routerLink="/login" routerLinkActive="active-link">Log In</a>
-      <a routerLink="/register" routerLinkActive="active-link">Registro</a>
+      <a *ngIf="!(authService.isLoggedIn$ | async)" routerLink="/login" routerLinkActive="active-link">Log In</a>
+      <a *ngIf="!(authService.isLoggedIn$ | async)" routerLink="/register" routerLinkActive="active-link">Registro</a>
+      <a *ngIf="(authService.isLoggedIn$ | async)" routerLink=""(click)="logout()">Log Out</a>
+      <span *ngIf="(authService.isLoggedIn$ | async)">{{ authService.username$ | async }}</span>
     </nav>
   </div>
 </header>

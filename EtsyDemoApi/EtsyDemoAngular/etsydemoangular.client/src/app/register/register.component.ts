@@ -1,19 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { UserService } from '../Services/user.service';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessDialogComponent } from '../success-dialog-component/success-dialog-component.component';
+import { UserExistsDialogComponent } from '../user-exist-dialog/user-exist-dialog.component';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
 
-  registerForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  registerForm: FormGroup = this.fb.group({}); // Inicialización básica
+
+  constructor(private fb: FormBuilder,
+              private userService: UserService,
+              private router: Router,
+              private dialog: MatDialog) { }
+
+  ngOnInit(): void {
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', Validators.required], // Campo para confirmar la contraseña
       name: this.fb.group({
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
@@ -25,51 +37,40 @@ export class RegisterComponent implements OnInit {
         zipcode: ['', Validators.required]
       }),
       phone: ['', Validators.required]
-    });
+    }, { validator: this.passwordMatchValidator }); // Validador para coincidencia de contraseñas
+    console.log('Form initialized', this.registerForm.value);
   }
 
-
-  passwordMatchValidator(frm: FormGroup) {
-    return frm.controls['password'].value === frm.controls['confirmPassword'].value ? null : { 'mismatch': true };
+  passwordMatchValidator(frm: FormGroup): { [key: string]: boolean } | null {
+    const pass = frm.get('password');
+    const confirmPass = frm.get('confirmPassword');
+    return pass && confirmPass && pass.value === confirmPass.value ? null : { 'mismatch': true };
   }
 
-
-  ngOnInit() {
-    this.registerForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      name: this.fb.group({
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required],
-      }),
-      address: this.fb.group({
-        city: ['', Validators.required],
-        street: ['', Validators.required],
-        number: ['', Validators.required],
-        zipcode: ['', Validators.required]
-      }),
-      phone: ['', Validators.required]
-    });
-  }
-
-  onSubmit() {
+  onSubmit(): void {
     if (this.registerForm.valid) {
-      let formData = this.registerForm.value;
-
-      // Transforma el campo 'number' de string a int
-      formData.address.number = parseInt(formData.address.number, 10);
-
-      // Asegúrate de que la conversión es válida
-      if (!isNaN(formData.address.number)) {
-        // Procesa el formulario con formData que ahora tiene el campo 'number' como int
-        console.log('Form Data:', formData);
-        // Aquí iría el código para enviar los datos al servidor o manejarlos internamente
-      } else {
-        console.error('Número de dirección inválido');
-        // Manejar error de conversión aquí
-      }
+      this.userService.registerUser(this.registerForm.value).subscribe({
+        next: (response) => {
+          // Check the response content here, not just rely on the next callback
+          if (response.status === 2 && response.message === "El usuario ya existe") {
+            this.dialog.open(UserExistsDialogComponent, {
+              data: { message: "Usuario ya existe" }
+            });
+          } else {
+            this.dialog.open(SuccessDialogComponent, {
+              data: { message: "Te registraste correctamente" }
+            });
+            this.router.navigate(['/']);
+          }
+        },
+        error: (errorResponse) => {
+          console.error('Error en el registro', errorResponse);
+          // Handle unexpected errors
+          console.error('Unexpected error:', errorResponse);
+        }
+      });
+    } else {
+      console.log('Form is not valid', this.registerForm);
     }
-    
   }
 }

@@ -1,0 +1,76 @@
+/* Estilos generales del contenedor de login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  width: 100vw;
+  background-color: #F7F5F2; /* Un fondo claro */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave para resaltar el recuadro */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.form-container {
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave para resaltar el recuadro */
+  background-color: #fff; /* Fondo blanco para el formulario */
+  width: auto;
+  max-width: 500px; /* Ancho máximo para el recuadro */
+  margin: auto; /* Asegura que esté centrado */
+}
+
+/* Estilos para los elementos del formulario */
+.form-group {
+  margin-bottom: 20px; /* Espacio entre los elementos del formulario */
+}
+
+.form-control {
+  width: 100%;
+  max-width: 300px; /* Ancho máximo para los inputs */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Bordes redondeados */
+  background-color: #FCF5ED; /* Un fondo muy suave de naranja */
+  margin: 0 auto; /* Centrado horizontal */
+  display: block;
+}
+
+/* Estilos para las etiquetas */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333; /* Texto oscuro para contraste */
+}
+
+/* Estilos para el botón de submit */
+.btn-primary {
+  background-color: #E6973C; /* Naranja como el botón de registro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px; /* Bordes redondeados para el botón */
+  cursor: pointer;
+  display: block;
+  margin: 20px auto; /* Centrado horizontal y espacio alrededor */
+  transition: background 0.3s ease;
+}
+
+  .btn-primary:hover {
+    background-color: #D77A0F; /* Un naranja más oscuro para el hover */
+  }
+
+/* Estilos de respuesta para pantallas pequeñas */
+@media (max-width: 600px) {
+  .form-control, .btn-primary {
+    width: 90%; /* Más ancho en pantallas pequeñas */
+  }
+}
+
+h2 {
+  color: #333; /* Color oscuro para el título */
+  margin-bottom: 20px; /* Espacio después del título */
+}

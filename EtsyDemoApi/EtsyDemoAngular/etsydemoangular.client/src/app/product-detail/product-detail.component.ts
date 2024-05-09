@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectorRef, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../Services/product.service';
-import { Product } from '../NewFolder/Product';
-import { ApiResponse } from '../NewFolder/ApiResponse';
+import { Product } from '../Models/Product';
+import { ApiResponse } from '../Models/ApiResponse';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
