@@ -1,6 +1,7 @@
 ﻿using Api.Data.Repository.Queries;
 using Api.Data.Repository.Queries.Contracts;
 using Api.Domain.Enum;
+using Api.Domain.Request;
 using Api.Domain.Response;
 using Api.Infraestructura.Context;
 using Api.Infraestructura.Models;
@@ -142,5 +143,8 @@ namespace Api.Service.Queries
             response = await _etsyQuery.GetProductByIdAsync(id);
             return response;
         }
+
+
+
     }
 }

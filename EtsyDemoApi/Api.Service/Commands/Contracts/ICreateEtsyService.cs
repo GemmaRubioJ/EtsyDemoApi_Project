@@ -1,11 +1,11 @@
-﻿//using Api.Domain.Request;
-//using Api.Domain.Response;
+﻿using Api.Domain.Request;
+using Api.Domain.Response;
 
-//namespace Api.Service.Commands
-//{
-//    public interface ICreateEtsyService
-//    {
-//        Task<Response> CreateProductAsync(CreateProductRequest createRequest);
-//        Task<Response> CreateShopAsync(CreateRequest createRequest);
-//    }
-//}
+namespace Api.Service.Commands
+{
+    public interface ICreateEtsyService
+    {
+        Task<ResponseUser> CreateUserAsync(RegisterUserRequest registerUserRequest);
+        Task<ResponseUserToken> LogInUserAsync(LogInRequest logInRequest);
+    }
+}

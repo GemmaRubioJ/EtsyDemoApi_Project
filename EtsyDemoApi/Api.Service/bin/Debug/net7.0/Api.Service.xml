@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api.Service</name>
+    </assembly>
+    <members>
+        <member name="M:Api.Service.Queries.GetEtsyService.GetProductsAsync">
+            <summary>
+            Obtiene todos los productos disponibles a través de la interfaz IEtsyQuery.
+            Este método inicialmente configura una respuesta con estado SUCCESS.
+            Si la respuesta cambia a ERROR durante la obtención de datos, se retorna inmediatamente la respuesta.
+            De lo contrario, procede a obtener los productos a través del método GetAllProductsAsync de IEtsyQuery y retorna la respuesta obtenida.
+            </summary>
+            <returns> ResponseProducts, que contiene el estado de la operación y, potencialmente, los productos recuperados.</returns>
+        </member>
+        <member name="M:Api.Service.Queries.GetEtsyService.GetProductsByNameAsync(System.String)">
+            <summary>
+            Busca productos por nombre utilizando la interfaz IEtsyQuery.
+            Este método configura una respuesta con estado SUCCESS.
+            Si la respuesta cambia a ERROR en algún punto durante la búsqueda de datos, la respuesta se retorna inmediatamente.
+            Si no, continúa y realiza la búsqueda por nombre a través del método GetProductsByNameAsync de IEtsyQuery y retorna la respuesta obtenida.
+            </summary>
+            <param name="name">El nombre del producto a buscar.</param>
+            <returns>ResponseProducts, que contiene el estado de la operación y los productos que coinciden con el criterio de búsqueda.</returns>
+        </member>
+        <member name="M:Api.Service.Queries.GetEtsyService.GetUsersAsync">
+            <summary>
+            Recupera usuarios desde una API externa y almacena nuevos usuarios en la base de datos.
+            Este método primero obtiene los usuarios de la API y verifica si ya existen en la base de datos
+            basándose en sus direcciones de correo electrónico. Solo se añaden los nuevos usuarios que no existen en la base de datos.
+            </summary>
+            <returns>
+            Un objeto ResponseUsers que contiene el estado de la operación, un mensaje que indica el resultado,
+            y potencialmente la lista de usuarios recién añadidos. 
+            </returns>
+            <remarks>
+            Este método realiza varias operaciones:
+            1. Llama a una API externa para obtener datos de los usuarios.
+            2. Recupera los correos electrónicos de usuarios existentes de la base de datos para verificar duplicados.
+            3. Filtra los usuarios existentes y prepara a los nuevos usuarios para su adición.
+            4. Guarda los nuevos usuarios en la base de datos si no existen previamente.
+            5. Devuelve una respuesta que indica el éxito o fracaso de estas operaciones.
+            </remarks>
+            
+        </member>
+    </members>
+</doc>
