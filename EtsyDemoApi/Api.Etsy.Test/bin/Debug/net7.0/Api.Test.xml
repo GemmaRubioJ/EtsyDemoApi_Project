@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api.Test</name>
+    </assembly>
+    <members>
+        <member name="M:Api.Test.Queries.GetProductsQueryTest.Get_All_Products_Ok">
+            <summary>
+            Prueba que GetProductsAsync obtiene correctamente todos los productos cuando IEtsyQuery subyacente retorna una respuesta exitosa.
+            Este test asegura que el servicio maneja correctamente y transmite los datos y el estado desde la capa de datos al controlador o a la siguiente capa superior.
+            También verifica la integridad de los datos retornados, asegurándose de que la lista de productos y el mensaje de éxito sean como se espera.
+            </summary>
+        </member>
+        <member name="M:Api.Test.Queries.GetProductsQueryTest.GetProductsByNameAsync_Returns_Successful_Response">
+            <summary>
+            Prueba que GetProductsByNameAsync recupera exitosamente productos por nombre.
+            Este método verifica que el servicio puede manejar respuestas exitosas de la capa de datos basadas en búsquedas de nombres de productos.
+            Comprueba que el servicio retorna el estado correcto y filtra los productos según los criterios de búsqueda.
+            </summary>
+        </member>
+        <member name="M:Api.Test.Queries.GetProductsQueryTest.GetProductsByNameAsync_Returns_Error_When_No_Products_Found">
+            <summary>
+            Prueba la respuesta de GetProductsByNameAsync cuando no se encuentran productos que coincidan con los criterios de búsqueda.
+            Este test verifica que el servicio maneja correctamente y comunica un estado de error cuando la capa de datos no encuentra productos coincidentes.
+            Asegura que el error se maneje de manera adecuada y se retorne el mensaje de error apropiado.
+            </summary>
+        </member>
+    </members>
+</doc>
