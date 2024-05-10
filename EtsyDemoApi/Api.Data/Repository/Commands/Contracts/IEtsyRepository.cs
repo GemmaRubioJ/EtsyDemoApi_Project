@@ -6,6 +6,6 @@ namespace Api.Data.Repository.Commands
     public interface IEtsyRepository
     {
         Task<Response> CreateProductAsync(CreateProductRequest createRequest);
-        Task<Response> CreateShopAsync(CreateRequest createRequest);
+        Task<ResponseUser> RegisterUserAsync(RegisterUserRequest registerUserRequest);
     }
 }

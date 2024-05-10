@@ -1,9 +1,11 @@
 ﻿using Api.Data.Repository.Queries.Contracts;
 using Api.Data.SeedWork;
 using Api.Domain.Enum;
+using Api.Domain.Request;
 using Api.Domain.Response;
 using Api.Infraestructura.Context;
 using Api.Infraestructura.Models;
+using Azure;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -65,6 +67,46 @@ namespace Api.Data.Repository.Queries
             return await _context.Users.AsNoTracking()
                                        .Select(u => u.Email)
                                        .ToListAsync();
+        }
+
+        public async Task<User> GetUserByEmailOrUsernameAsync(string email, string username)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email || u.Username == username);
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+
+
+        public async Task<ResponseUserToken> LogInUserAsync(LogInRequest logInRequest)
+        {
+            try
+            {
+                var user = await GetUserByEmail(logInRequest.Email);
+                if (user == null)
+                {
+                    _responseUserToken.Status = StatusType.ERROR;
+                    _responseUserToken.Message = "Usuario no encontrado.";
+                    return _responseUserToken;
+                }
+                if (user.Password != logInRequest.Password) // Cambiar esto por la comprobación del hash más adelante
+                {
+                    _responseUserToken.Status = StatusType.ERROR;
+                    _responseUserToken.Message = "Contraseña incorrecta.";
+                    return _responseUserToken;
+                }
+                _responseUserToken.Data = user;
+                _responseUserToken.Message = "Incio de sesión exitoso";
+            }
+            catch (Exception ex)
+            {
+                _responseUserToken.Message += ex.Message;
+                _responseUserToken.Status = StatusType.ERROR;
+            }
+            return _responseUserToken;
         }
 
     }
