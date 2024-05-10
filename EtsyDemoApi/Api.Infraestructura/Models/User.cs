@@ -52,8 +52,9 @@ namespace Api.Infraestructura.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AddressId { get; set; }
+        public int? GeolocationId { get; set; }
         [JsonProperty("geolocation")]
-        public Geolocation Geolocation { get; set; }
+        public Geolocation? Geolocation { get; set; }
 
         [JsonProperty("city")]
         public string City { get; set; }
