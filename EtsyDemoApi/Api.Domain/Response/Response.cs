@@ -27,4 +27,6 @@ namespace Api.Domain.Response
         public string Token { get; set; }
     }
 
+    public class ResponseCart : Response<Cart> { }
+
 }
