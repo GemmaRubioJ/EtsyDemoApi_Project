@@ -7,7 +7,7 @@ namespace Api.Infraestructura.Models
     public class Product
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [JsonProperty("id")]
         public int ProductId { get; set; }
         [JsonProperty("title")]
@@ -29,10 +29,13 @@ namespace Api.Infraestructura.Models
     }
     public class ProductRating
     {
-        [JsonProperty("rate")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }  // Clave primaria única
+
+        [JsonProperty("rate")]
         public double Rate { get; set; }
+
         [JsonProperty("count")]
         public int Count { get; set; }
     }
