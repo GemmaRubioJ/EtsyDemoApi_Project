@@ -6,6 +6,8 @@ using Api.Service.Queries;
 using Api.Data.Repository.Queries.Contracts;
 using Api.Data.Repository.Commands;
 using Api.Service.Commands;
+using Api.Data.Repository.Commands.Contracts;
+using Api.Service.Commands.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +36,8 @@ builder.Services.AddDbContext<ApiContext>(options =>
 //Add EtsyService
 builder.Services.AddTransient<IEtsyRepository, EtsyRepository>();
 builder.Services.AddTransient<IEtsyQuery, EtsyQuery>();
+builder.Services.AddTransient<ICartRepository, CartRepository>();
+builder.Services.AddTransient<ICartService, CartService>();
 builder.Services.AddTransient<ICreateEtsyService, CreateEtsyService>();
 builder.Services.AddTransient<IUserQuery, UserQuery>();
 builder.Services.AddTransient<IGetEtsyService, GetEtsyService>();
