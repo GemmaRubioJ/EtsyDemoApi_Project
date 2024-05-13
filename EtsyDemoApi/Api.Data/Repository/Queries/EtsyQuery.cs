@@ -16,63 +16,6 @@ namespace Api.Data.Repository.Queries
         public EtsyQuery( HttpClient httpclient, ApiContext context) : base( httpclient, context) { }
 
 
-        //public async Task<ResponseShops> GetShopsAsync()
-        //{
-        //    try
-        //    {
-        //        List<Shop> shops = await _context.Shops.Include(shop => shop.Products).ToListAsync();
-        //        if (!shops.Any())
-        //        {
-        //            _responseShops.Status = StatusType.ERROR;
-        //            _responseShops.Message = "Error al recolectar las tiendas";
-        //            return _responseShops;
-        //        }
-        //        else
-        //        {
-        //            _responseShops.Status = StatusType.SUCCESS;
-        //            _responseShops.Message = "Tiendas recolectadas exitosamente";
-        //            _responseShops.Data = shops;
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _responseShops.Message += ex.Message;
-        //        _responseShops.Status = StatusType.ERROR;
-        //    }
-        //    return _responseShops;
-        //}
-
-
-        //public async Task<ResponseShops> GetShopsByNameAsync(string name)
-        //{
-        //    try
-        //    {
-        //        IEnumerable<Shop> shops =  await _context.Shops.Where(shop => shop.Name.Contains(name)).ToListAsync();
-        //        if (!shops.Any())
-        //        {
-        //            _responseShops.Status = StatusType.ERROR;
-        //            _responseShops.Message = "Error al recolectar las tiendas";
-        //            return _responseShops;
-        //        }
-        //        else
-        //        {
-        //            _responseShops.Status = StatusType.SUCCESS;
-        //            _responseShops.Message = "Tiendas recolectadas exitosamente";
-        //            _responseShops.Data = shops;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _responseShops.Message += ex.Message;
-        //        _responseShops.Status = StatusType.ERROR;
-        //    }
-        //    return _responseShops;
-        //}
-
-
-
-
         /// <summary>
         /// Recupera todos los productos disponibles de la API externa.
         /// Este método realiza una solicitud HTTP GET a la API y deserializa la respuesta en una lista de productos.
@@ -143,6 +86,17 @@ namespace Api.Data.Repository.Queries
                     }
                     else
                     {
+                        // Guardar o actualizar los productos en la base de datos
+                        foreach (var product in products)
+                        {
+                            var existingProduct = await _context.Products
+                                .FirstOrDefaultAsync(p => p.ProductId == product.ProductId);
+                            if (existingProduct == null)
+                            {
+                                _context.Products.Add(product); // Agregar si no existe
+                            }
+                        }
+                        await _context.SaveChangesAsync();
                         _responseProducts.Status = StatusType.SUCCESS;
                         _responseProducts.Message = "Productos recolectados exitosamente";
                         _responseProducts.Data = products;

@@ -21,38 +21,7 @@ namespace Api.Data.Repository.Commands
 
         
 
-        public async Task<Response> CreateProductAsync(CreateProductRequest createRequest)
-        {
-            try
-            {
-                if (createRequest is null)
-                {
-                    _response.Status = StatusType.ERROR;
-                    _response.Message = "La solicitud no es correcta";
-                    return _response;
-                }
-                else
-                {
-                    Product product = new Product
-                    {
-                        Title = createRequest.Title,
-                        Description = createRequest.Description,
-                        Price = createRequest.Price,
-                        //ShopId = createRequest.ShopId,
-                    };
-                    _context.Products.Add(product);
-                    _response.Message = "Se añadió el Producto correctamente";
 
-                }
-            }
-            catch (Exception ex)
-            {
-                _response.Message = ex.Message;
-                _response.Status = StatusType.ERROR;
-            }
-            await _context.SaveChangesAsync();
-            return _response;
-        }
 
         public async Task<ResponseUser> RegisterUserAsync(RegisterUserRequest registerUserRequest)
         {
