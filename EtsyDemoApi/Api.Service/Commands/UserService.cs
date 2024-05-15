@@ -1,13 +1,10 @@
-﻿
-using Api.Data.Repository.Commands;
-using Api.Data.Repository.Queries;
+﻿using Api.Data.Repository.Commands;
 using Api.Data.Repository.Queries.Contracts;
 using Api.Domain.Enum;
 using Api.Domain.Request;
 using Api.Domain.Response;
-using Api.Infraestructura.Context;
 using Api.Infraestructura.Models;
-using Microsoft.Extensions.Configuration;
+using Api.Service.Commands.Contracts;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -15,24 +12,15 @@ using System.Text;
 
 namespace Api.Service.Commands
 {
-    public class CreateEtsyService : ICreateEtsyService
+    public class UserService : IUserService
     {
-        private readonly HttpClient? _httpClient;
-        private readonly string? _apiKey;
-        private readonly IEtsyRepository _etsyRepository;
         private readonly IUserQuery _userQuery;
+        private readonly IEtsyRepository _etsyRepository;
 
-
-        public CreateEtsyService(HttpClient httpClient,
-                          IConfiguration configuration,
-                          ApiContext context,
-                          IEtsyRepository etsyRepository,
-                          IUserQuery userQuery)
+        public UserService (IUserQuery userQuery, IEtsyRepository etsyRepository)
         {
-            _httpClient = httpClient;
-            _apiKey = configuration["EtsyApiKey"];
-            _etsyRepository = etsyRepository;
             _userQuery = userQuery;
+            _etsyRepository = etsyRepository;
         }
 
         public async Task<ResponseUser> CreateUserAsync(RegisterUserRequest registerUserRequest)
@@ -65,7 +53,7 @@ namespace Api.Service.Commands
         private string GenerateJwtToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("JWT_SECRET_KEY")); 
+            var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("JWT_SECRET_KEY"));
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -82,7 +70,5 @@ namespace Api.Service.Commands
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
-
-       
     }
 }
