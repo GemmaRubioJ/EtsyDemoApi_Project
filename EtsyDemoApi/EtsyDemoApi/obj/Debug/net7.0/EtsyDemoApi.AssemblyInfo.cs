@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EtsyDemoApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b4a0d3ef3bc53420817c32b3b511df05d2ff2ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a52cd2d0643f0593980d31c148916816ef5c18a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EtsyDemoApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EtsyDemoApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,21 +8,20 @@ using Api.Data.Repository.Commands;
 using Api.Service.Commands;
 using Api.Data.Repository.Commands.Contracts;
 using Api.Service.Commands.Contracts;
+using Api.Service.Queries.Contracts;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configura TLS 1.2 y TLS 1.3 para todas las conexiones HTTP salientes
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls13;
 
 // Add .env
 DotEnv.Load();
 var config = builder.Configuration;
 
-// Add services to the container.
 
-// Add Configuración Cliente HTTP
-//builder.Services.AddHttpClient("etsyClient", client =>
-//{
-//    client.BaseAddress = new Uri("https://openapi.etsy.com/v3/application/");
-//    // Configura aquí otros aspectos como headers si es necesario
-//});
+//Add HttpClient
 builder.Services.AddHttpClient("FakeStoreClient", client =>
 {
     client.BaseAddress = new Uri("https://fakestoreapi.com/");
@@ -33,12 +32,14 @@ builder.Services.AddDbContext<ApiContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BD_Etsy")));
 
 
-//Add EtsyService
+//Add Services
 builder.Services.AddTransient<IEtsyRepository, EtsyRepository>();
 builder.Services.AddTransient<IEtsyQuery, EtsyQuery>();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
+builder.Services.AddTransient<ICartQuery, CartQuery>();
 builder.Services.AddTransient<ICartService, CartService>();
-builder.Services.AddTransient<ICreateEtsyService, CreateEtsyService>();
+builder.Services.AddTransient<IGetCartService, GetCartService>();
+builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IUserQuery, UserQuery>();
 builder.Services.AddTransient<IGetEtsyService, GetEtsyService>();
 
@@ -69,8 +70,9 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
+app.UseRouting();
 app.UseCors("AllowSpecificOrigin");
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

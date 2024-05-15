@@ -11,16 +11,14 @@ namespace EtsyDemoApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EtsyController : Controller
+    public class ProductController : Controller
     {
 
         private readonly IGetEtsyService _getEtsyService;
-        private readonly ICreateEtsyService _createEtsyService;
 
-        public EtsyController(IGetEtsyService getEtsyService, ICreateEtsyService createEtsyService) {
+        public ProductController(IGetEtsyService getEtsyService) {
         
             _getEtsyService = getEtsyService;
-            _createEtsyService = createEtsyService;
         }
 
 
@@ -68,46 +66,6 @@ namespace EtsyDemoApi.Controllers
         {
         return await _getEtsyService.GetUsersAsync();
         }
-
-
-        //GET Login
-        [HttpPost("login")]
-        [SwaggerOperation("Buscar todos los usuarios")]
-        [ProducesResponseType(typeof(User), 200)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> LogIn([FromBody] LogInRequest logInRequest)
-        {
-            var response = await _createEtsyService.LogInUserAsync(logInRequest);
-            if (response.Status == StatusType.ERROR)
-            {
-                return BadRequest(response);
-            }
-            return Ok(response);
-        }
-
-        //POST Registrar Usuario
-        [HttpPost("register")]
-        [SwaggerOperation("Registro de Usuario")]
-        [ProducesResponseType(typeof(User), 200)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<Response> RegisterUser(RegisterUserRequest registerUserRequest)
-        {
-            return await _createEtsyService.CreateUserAsync(registerUserRequest);
-        }
-
-
-        ////POST crear Producto para pruebas
-        //[HttpPost("product/create")]
-        //[SwaggerOperation("Crear Producto para simulación de la Etsy Api")]
-        //[ProducesResponseType(typeof(List<Product>), 200)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        //public async Task<Response> CreateProduct(CreateProductRequest createRequest)
-        //{
-        //    return await _createEtsyService.CreateProductAsync(createRequest);
-        //}
 
     }
 }
