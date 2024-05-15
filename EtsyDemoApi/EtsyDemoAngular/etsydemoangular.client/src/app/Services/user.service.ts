@@ -10,8 +10,8 @@ import { LoginRequest } from '../Models/LoginRequest';
 })
 export class UserService {
 
-  private apiUrl = 'https://localhost:7088/api/Etsy/register';
-  private apiUrlLogin = 'https://localhost:7088/api/Etsy/login';
+  private apiUrl = 'https://localhost:7088/api/User/register';
+  private apiUrlLogin = 'https://localhost:7088/api/User/login';
   constructor(private http: HttpClient) { }
 
   registerUser(userData: RegisterUserRequest): Observable<any> {

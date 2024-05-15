@@ -49,3 +49,8 @@
 input[type="text"] {
   margin-right: 10px;
 }
+
+.etsy-header .header-nav a img {
+  height: 40px;
+  width: auto;
+}

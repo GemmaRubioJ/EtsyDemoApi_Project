@@ -31,7 +31,7 @@
   max-width: 300px; /* Ancho máximo para los inputs */
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 20px; /* Bordes redondeados */
+  border-radius: 10px; /* Bordes redondeados */
   background-color: #FCF5ED; /* Un fondo muy suave de naranja */
   margin: 0 auto; /* Centrado horizontal */
   display: block;

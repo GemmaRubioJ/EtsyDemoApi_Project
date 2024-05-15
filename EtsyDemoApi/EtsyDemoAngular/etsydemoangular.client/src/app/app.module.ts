@@ -2,6 +2,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +20,8 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SuccessDialogComponent } from './success-dialog-component/success-dialog-component.component';
 import { UserExistsDialogComponent } from './user-exist-dialog/user-exist-dialog.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +35,14 @@ import { UserExistsDialogComponent } from './user-exist-dialog/user-exist-dialog
     LoginComponent,
     SuccessDialogComponent,
     RegisterComponent,
-    UserExistsDialogComponent
+    UserExistsDialogComponent,
+    CartComponent,
+    CheckoutFormComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
     AppRoutingModule, ReactiveFormsModule, ReactiveFormsModule,
-    FormsModule
+    FormsModule, MatIconModule, BrowserAnimationsModule, MatTableModule
   ],
   providers: [
     provideAnimationsAsync()

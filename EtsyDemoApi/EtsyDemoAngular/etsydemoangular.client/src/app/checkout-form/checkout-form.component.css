@@ -1,0 +1,93 @@
+/* Estilos generales del formulario */
+.container {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  height: 100vh; /* Usa el alto completo de la ventana del navegador */
+  width: 100vw; /* Usa el ancho completo de la ventana del navegador */
+  margin: 0; /* Elimina cualquier margen por defecto */
+  padding: 0; /* Elimina cualquier padding por defecto */
+  position: relative; /* Para asegurar centrado absoluto */
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* Espacio entre las columnas */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Ajuste el porcentaje según sea necesario */
+}
+
+.user-details, .shipping-address {
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos de entrada, select y área de texto */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #FBF7F2;
+  font-size:12px;
+}
+
+h1, h2 {
+  text-align: center; /* Asegura que ambos títulos estén centrados */
+  margin-bottom: 20px;
+}
+
+.submit-btn-container {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+}
+
+button {
+  background-color: #E6973C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+  button:hover {
+    background-color: #D77A0F;
+  }
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+  }
+
+  .column {
+    width: 100%; /* Ajusta las columnas para pantallas pequeñas */
+  }
+
+  .form-container {
+    padding: 10px;
+    width: 90%;
+  }
+}

@@ -1,9 +1,9 @@
 import { Component, OnInit, ChangeDetectorRef, Inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../Services/product.service';
 import { Product } from '../Models/Product';
-import { ApiResponse } from '../Models/ApiResponse';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CartService } from '../Services/cart.service';
+import { CartItem } from '../Models/CartItem';
 
 @Component({
   selector: 'app-product-detail',
@@ -16,6 +16,7 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
+    private cartService: CartService,
     private cd: ChangeDetectorRef,
     public dialogRef: MatDialogRef<ProductDetailComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
@@ -28,25 +29,43 @@ export class ProductDetailComponent implements OnInit {
   }
 
   fetchProduct(productId: string): void {
-    console.log('Llamando a fetchProduct con ID:', productId);  // Log para ver si el método se llama
+    console.log('Llamando a fetchProduct con ID:', productId); 
     this.productService.getProductById(productId).subscribe(
       response => {
-        console.log('Respuesta recibida:', response);  // Log para ver la respuesta completa
+        console.log('Respuesta recibida:', response);  
         if (response && response.data) {
-          console.log('Producto cargado:', response.data);  // Confirmar que se recibe el producto correctamente
+          console.log('Producto cargado:', response.data);  
           this.product = response.data;
-          this.cd.detectChanges();  // Forzar la detección de cambios
+          this.cd.detectChanges();  
         } else {
-          console.log('La respuesta no contiene datos.');  // Si no hay datos en la respuesta
+          console.log('La respuesta no contiene datos.');  
         }
       },
       error => {
-        console.error('Error fetching product:', error);  // Log de cualquier error recibido
+        console.error('Error fetching product:', error);  
       }
     );
   }
 
   closeDialog(): void {
-    this.dialogRef.close(); // Cerrar el modal
+    this.dialogRef.close(); 
+  }
+
+  addToCart(product: Product): void {
+    let cart: CartItem[] = JSON.parse(localStorage.getItem('cart') || '[]');
+    const index = cart.findIndex(item => item.productId === product.productId);
+
+    if (index === -1) {
+      const newItem: CartItem = {
+        ...product,
+        quantity: 1  // cantidad inicial
+      };
+      cart.push(newItem);
+    } else {
+      cart[index].quantity += 1;  // incrementar la cantidad si ya está en el carrito
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    this.closeDialog();
   }
 }

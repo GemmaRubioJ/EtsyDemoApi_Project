@@ -9,8 +9,11 @@
     <nav class="header-nav">
       <a *ngIf="!(authService.isLoggedIn$ | async)" routerLink="/login" routerLinkActive="active-link">Log In</a>
       <a *ngIf="!(authService.isLoggedIn$ | async)" routerLink="/register" routerLinkActive="active-link">Registro</a>
-      <a *ngIf="(authService.isLoggedIn$ | async)" routerLink=""(click)="logout()">Log Out</a>
+      <a *ngIf="(authService.isLoggedIn$ | async)" routerLink="" (click)="logout()">Log Out</a>
       <span *ngIf="(authService.isLoggedIn$ | async)">{{ authService.username$ | async }}</span>
+      <a *ngIf="(authService.isLoggedIn$ | async)" routerLink="/cart" class="cart-icon">
+        <img src="assets/shopping-cart.jpg" alt="Carrito">
+      </a>
     </nav>
   </div>
 </header>

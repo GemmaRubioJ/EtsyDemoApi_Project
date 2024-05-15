@@ -7,24 +7,24 @@
         <!-- Columna izquierda para name, address y phone -->
         <div class="col-md-6">
           <div formGroupName="name">
-            <label for="firstName">First Name *</label>
+            <label for="firstName">Nombre *</label>
             <input type="text" formControlName="firstName" id="firstName" placeholder="First Name">
-            <label for="lastName">Last Name *</label>
+            <label for="lastName">Apellidos *</label>
             <input type="text" formControlName="lastName" id="lastName" placeholder="Last Name">
           </div>
 
           <div formGroupName="address">
-            <label for="city">City </label>
+            <label for="city">Ciudad </label>
             <input type="text" formControlName="city" id="city" placeholder="City">
-            <label for="street">Street </label>
+            <label for="street">Calle </label>
             <input type="text" formControlName="street" id="street" placeholder="Street">
-            <label for="number">Number </label>
+            <label for="number">Numero </label>
             <input type="text" formControlName="number" id="number" placeholder="Number">
-            <label for="zipcode">Zipcode </label>
+            <label for="zipcode">Código Postal  </label>
             <input type="text" formControlName="zipcode" id="zipcode" placeholder="Zipcode">
           </div>
 
-          <label for="phone">Phone </label>
+          <label for="phone">Número de Teléfono </label>
           <input type="text" formControlName="phone" id="phone" placeholder="Phone">
         </div>
 
@@ -34,19 +34,19 @@
             <label for="email">Email *</label>
             <input type="email" formControlName="email" id="email" placeholder="Email">
 
-            <label for="username">Username *</label>
+            <label for="username">Nombre de Usuario *</label>
             <input type="text" formControlName="username" id="username" placeholder="Username">
 
-            <label for="password">Password *</label>
+            <label for="password">Contraseña  *</label>
             <input type="password" formControlName="password" id="password" placeholder="Password">
-            <label for="confirmPassword">Confirm Password *</label>
+            <label for="confirmPassword">Repita la Contraseña *</label>
             <input type="password" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
             <div *ngIf="registerForm.hasError('mismatch', ['password', 'confirmPassword'])">
               Las contraseñas no coinciden
             </div>
           </div>
           <div class="submit-btn-container">
-            <button type="submit" [disabled]="false">Register</button>
+            <button type="submit" [disabled]="false">Registrar</button>
           </div>
         </div>
       </div>

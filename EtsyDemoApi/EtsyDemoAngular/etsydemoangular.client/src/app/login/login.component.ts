@@ -24,7 +24,7 @@ export class LoginComponent {
         next: response => {
           console.log('Login successful', response);
           // Manejo de la respuesta exitosa aquí
-          this.auth.login(response.token, response.data.username);
+          this.auth.login(response.token, response.data.username, response.data.id);
           this.router.navigate(['/']);
         },
         error: error => {

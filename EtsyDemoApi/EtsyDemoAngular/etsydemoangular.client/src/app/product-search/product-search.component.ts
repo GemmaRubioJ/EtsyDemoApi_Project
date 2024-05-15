@@ -9,7 +9,7 @@ import { UserAuthService } from '../Services/user-auth.service';
   templateUrl: './product-search.component.html',
   styleUrls: ['./product-search.component.css']
 })
-export class ProductSearchComponent implements OnInit {
+export class ProductSearchComponent  {
 
   private searchTerms = new Subject<string>();
 
@@ -22,13 +22,11 @@ export class ProductSearchComponent implements OnInit {
     ).subscribe(term => this.productService.searchProducts(term));
   }
 
-  ngOnInit(): void {
-    // No es necesario manejar suscripciones aquí porque se hace en la plantilla con async pipe
-  }
+
 
   logout(): void {
     this.authService.logout();
-    this.router.navigate(['/']); // Navegar al inicio o a la página de login
+    this.router.navigate(['/']); 
   }
 
   searchProducts(term: string): void {

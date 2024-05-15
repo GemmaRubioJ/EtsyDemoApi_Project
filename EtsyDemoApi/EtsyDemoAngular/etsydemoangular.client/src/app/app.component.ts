@@ -11,20 +11,17 @@ import { filter } from 'rxjs';
 export class AppComponent { 
   showBanner: boolean = true;  // Controla la visibilidad del banner
   showProducts: boolean = false;  // Controla la visibilidad de los productos
+  isCartPage: boolean = false; //Controla la visibilidad del carrito
 
   constructor(private router: Router) {
     // Escucha los eventos de cambio de ruta
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event) => {
-      // Tu código aquí
-      if (event.url === '/register') {
+      if (event.url === '/register' || event.url === '/login' || event.url === '/cart' || event.url === '/checkout') {
         this.showBanner = false;
         this.showProducts = false;
-      } else if (event.url === '/login') {
-        this.showBanner = false;
-        this.showProducts = false;
-      } else {
+      }  else {
         this.showBanner = true;
         this.showProducts = false;
       }

@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class ProductService {
 
-  private apiUrl = 'https://localhost:7088/api/Etsy/products';  // Ajusta esto según sea necesario
+  private apiUrl = 'https://localhost:7088/api/Product/products';  // Ajusta esto según sea necesario
 
-  private searchUrl = 'https://localhost:7088/api/Etsy/products/search/';
+  private searchUrl = 'https://localhost:7088/api/Product/products/search/';
 
   private searchResults = new BehaviorSubject<Product[]>([]);
 
