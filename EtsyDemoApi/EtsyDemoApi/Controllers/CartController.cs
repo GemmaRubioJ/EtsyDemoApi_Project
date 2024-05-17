@@ -1,5 +1,7 @@
-﻿using Api.Domain.Request;
+﻿using Api.Domain.Enum;
+using Api.Domain.Request;
 using Api.Domain.Response;
+using Api.Infraestructura.DTOs;
 using Api.Infraestructura.Models;
 using Api.Service.Commands.Contracts;
 using Api.Service.Queries.Contracts;
@@ -14,13 +16,18 @@ namespace EtsyDemoApi.Controllers
     {
         private readonly ICartService _cartService;
         private readonly IGetCartService _getCartService;
+        private readonly IEmailService _emailService;
         private readonly ILogger<CartController> _logger;
 
-        public CartController(ICartService cartService, IGetCartService getCartService, ILogger<CartController> logger)
+        public CartController(ICartService cartService, 
+                                IGetCartService getCartService,
+                                ILogger<CartController> logger,
+                                IEmailService emailService)
         {
             _cartService = cartService;
             _getCartService = getCartService;
             _logger = logger;
+            _emailService = emailService;
         }
 
         //POST Registrar un carrito 
@@ -75,6 +82,25 @@ namespace EtsyDemoApi.Controllers
         public async Task<ResponseCart> GetCart(int idUser)
         {
             return await _getCartService.GetCartAsync(idUser);
+        }
+
+
+        //POST info del carrito
+        [HttpPost("checkout")]
+        [SwaggerOperation("Envío info del carrito")]
+        [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Checkout(CartRequest request)
+        {
+            var response = await _cartService.ProccesCheckout(request);
+
+            if (response.Status == StatusType.SUCCESS)
+            {
+                await _emailService.SendEmailAsync(response.Data.Email, response.Data.CartItems);
+                return Ok(response);
+            }
+            return BadRequest(response);
         }
     }
 }

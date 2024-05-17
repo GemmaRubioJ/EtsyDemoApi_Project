@@ -18,8 +18,9 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProt
 
 // Add .env
 DotEnv.Load();
+var sendGridApiKey = Environment.GetEnvironmentVariable("EMAIL_APIKEY");
+Console.WriteLine($"SendGrid API Key: {sendGridApiKey}");
 var config = builder.Configuration;
-
 
 //Add HttpClient
 builder.Services.AddHttpClient("FakeStoreClient", client =>
@@ -31,7 +32,6 @@ builder.Services.AddHttpClient("FakeStoreClient", client =>
 builder.Services.AddDbContext<ApiContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BD_Etsy")));
 
-
 //Add Services
 builder.Services.AddTransient<IEtsyRepository, EtsyRepository>();
 builder.Services.AddTransient<IEtsyQuery, EtsyQuery>();
@@ -42,6 +42,11 @@ builder.Services.AddTransient<IGetCartService, GetCartService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IUserQuery, UserQuery>();
 builder.Services.AddTransient<IGetEtsyService, GetEtsyService>();
+builder.Services.AddScoped<IEmailService>(provider => {
+    var logger = provider.GetRequiredService<ILogger<EmailService>>();
+    return new EmailService(sendGridApiKey, logger);
+});
+
 
 
 builder.Services.AddControllers();
