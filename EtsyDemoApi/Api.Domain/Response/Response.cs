@@ -1,4 +1,5 @@
 ﻿using Api.Domain.Enum;
+using Api.Infraestructura.DTOs;
 using Api.Infraestructura.Models;
 
 namespace Api.Domain.Response
@@ -28,5 +29,6 @@ namespace Api.Domain.Response
     }
 
     public class ResponseCart : Response<Cart> { }
+    public class ResponseCheckout :Response<EmailDataDto> { }
 
 }
