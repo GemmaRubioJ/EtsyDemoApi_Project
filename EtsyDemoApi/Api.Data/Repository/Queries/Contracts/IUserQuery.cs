@@ -11,6 +11,7 @@ namespace Api.Data.Repository.Queries.Contracts
         Task<IEnumerable<string>> GetExistingUserEmailsAsync();
         Task<User> GetUserByEmailOrUsernameAsync(string email, string username);
         Task<User> GetUserByEmail(string email);
+        Task<User> GetUserByIdAsync(int userId);
         Task<ResponseUserToken> LogInUserAsync(LogInRequest logInRequest);
 
     }

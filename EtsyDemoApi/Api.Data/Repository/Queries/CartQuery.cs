@@ -3,6 +3,7 @@ using Api.Data.SeedWork;
 using Api.Domain.Enum;
 using Api.Domain.Response;
 using Api.Infraestructura.Context;
+using Api.Infraestructura.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api.Data.Repository.Queries
@@ -36,6 +37,26 @@ namespace Api.Data.Repository.Queries
                 _responseCart.Status = StatusType.ERROR;
             }
             return _responseCart;
+        }
+
+        public async Task<string> GetProductName(int productId)
+        {
+            var product =  await _context.Products.
+                                            Where(p => p.ProductId == productId).
+                                            Select(p => p.Title).
+                                            FirstOrDefaultAsync(); 
+
+            return product;
+        }
+
+        public async Task<decimal> GetProductPrice(int productId)
+        {
+            var product = await _context.Products.
+                                        Where(p => p.ProductId == productId).
+                                        Select(p =>p.Price).
+                                        FirstOrDefaultAsync();
+
+            return product;
         }
     }
 }

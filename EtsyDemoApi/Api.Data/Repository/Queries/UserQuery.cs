@@ -79,6 +79,11 @@ namespace Api.Data.Repository.Queries
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
 
+        public async Task<User> GetUserByIdAsync(int userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
 
 
         public async Task<ResponseUserToken> LogInUserAsync(LogInRequest logInRequest)
