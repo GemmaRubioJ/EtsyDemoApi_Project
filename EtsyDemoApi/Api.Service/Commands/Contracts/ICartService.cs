@@ -8,5 +8,6 @@ namespace Api.Service.Commands.Contracts
         Task<ResponseCart> CreateCartAsync(CartRequest request);
         Task<ResponseCart> DeleteCartAsync(int id);
         Task<ResponseCart> UpdateCartAsync(int idCart, UpdateCartRequest request);
+        Task<ResponseCheckout> ProccesCheckout(CartRequest request);
     }
 }
