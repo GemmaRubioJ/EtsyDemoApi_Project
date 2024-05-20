@@ -1,35 +1,37 @@
 <div class="container-fluid">
-  <br /><br /><br /> <br />
+  <br /><br /><br /><br />
   <div class="form-container">
     <h1>Envío estándar a domicilio</h1>
     <br />
-    <div class="row">
-      <div class="column user-details">
-        <h2>Datos personales</h2>
-        <input type="text" formControlName="fullName" id="fullName" placeholder="Nombre ">
-        <input type="text" formControlName="LastName" id="LastName" placeholder="Apellidos">
-        <input type="email" formControlName="email" id="email" placeholder="Email">
-        <input type="text" formControlName="phone" id="phone" placeholder="Número de teléfono">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="column user-details" formGroupName="personalInfo">
+          <h2>Datos personales</h2>
+          <input type="text" formControlName="fullName" id="fullName" placeholder="Nombre">
+          <input type="text" formControlName="lastName" id="lastName" placeholder="Apellidos">
+          <input type="email" formControlName="email" id="email" placeholder="Email">
+          <input type="text" formControlName="phone" id="phone" placeholder="Número de teléfono">
+        </div>
+        <div class="column shipping-address" formGroupName="shippingAddress">
+          <h2>Información de Envío</h2>
+          <input type="text" formControlName="street" id="street" placeholder="Calle y número">
+          <input type="text" formControlName="door" id="door" placeholder="Escalera, piso,...">
+          <input type="text" formControlName="city" id="city" placeholder="Ciudad o localidad">
+          <input type="text" formControlName="postalCode" id="postalCode" placeholder="Código postal">
+          <label for="state">Provincia</label>
+          <select formControlName="state" id="state" required>
+            <option value="" disabled selected>Selecciona una Provincia</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Zaragoza">Zaragoza</option>
+          </select>
+        </div>
       </div>
-      <div class="column shipping-address">
-        <h2>Información de Envío</h2>
-        <input type="text" formControlName="street" id="street" placeholder="Calle y número">
-        <input type="text" formControlName="door" id="door" placeholder="Escalera, piso,...">
-        <input type="text" formControlName="city" id="city" placeholder="Ciudad o localidad">
-        <input type="text" formControlName="postalCode" id="postalCode" placeholder="Código postal">
-        <label for="state">Provincia</label>
-        <select formControlName="state" id="state" required>
-          <option value="" disabled selected>Selecciona una Provincia</option>
-          <option value="Madrid">Madrid</option>
-          <option value="Barcelona">Barcelona</option>
-          <option value="Valencia">Valencia</option>
-          <option value="Sevilla">Sevilla</option>
-          <option value="Zaragoza">Zaragoza</option>
-        </select>
+      <div class="submit-btn-container">
+        <button type="submit">Enviar Pedido</button>
       </div>
-    </div>
-    <div class="submit-btn-container">
-      <button type="submit">Enviar Pedido</button>
-    </div>
+    </form>
   </div>
 </div>

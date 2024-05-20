@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserExistDialogComponent } from './user-exist-dialog.component';
+import { UserExistsDialogComponent } from './user-exist-dialog.component';
 
 describe('UserExistDialogComponent', () => {
-  let component: UserExistDialogComponent;
-  let fixture: ComponentFixture<UserExistDialogComponent>;
+  let component: UserExistsDialogComponent;
+  let fixture: ComponentFixture<UserExistsDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserExistDialogComponent]
+      declarations: [UserExistsDialogComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(UserExistDialogComponent);
+    fixture = TestBed.createComponent(UserExistsDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

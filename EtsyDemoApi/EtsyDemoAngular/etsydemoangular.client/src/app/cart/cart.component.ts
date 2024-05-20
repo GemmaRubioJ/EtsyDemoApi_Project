@@ -86,7 +86,6 @@ export class CartComponent implements OnInit {
     this.cartService.createCart(cartData).subscribe({
       next: (response) => {
         console.log('Compra completada:', response);
-        localStorage.removeItem('cart');
         this.router.navigate(['/checkout']);
       },
       error: (error) => console.error('Error al registrar el carrito:', error)

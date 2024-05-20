@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { CartRequest } from '../Models/CartRequest';
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +44,9 @@ export class CartService {
     return this.http.post(`${this.apiUrl}/register`, cartData);
   }
 
+  checkout(cartRequest: CartRequest): Observable<any> {
+    return this.http.post(`${this.apiUrl}/checkout`, cartRequest);
+  }
 
 }
 
