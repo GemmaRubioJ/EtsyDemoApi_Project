@@ -18,7 +18,7 @@ export class AppComponent {
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event) => {
-      if (event.url === '/register' || event.url === '/login' || event.url === '/cart' || event.url === '/checkout') {
+      if (event.url === '/register' || event.url === '/login' || event.url === '/cart' || event.url === '/checkout' || event.url === '/purchase-success') {
         this.showBanner = false;
         this.showProducts = false;
       }  else {

@@ -23,6 +23,7 @@ import { UserExistsDialogComponent } from './user-exist-dialog/user-exist-dialog
 import { CartComponent } from './cart/cart.component';
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
+import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
     UserExistsDialogComponent,
     CartComponent,
     CheckoutFormComponent,
-    AuthDialogComponent
+    AuthDialogComponent,
+    PurchaseSuccessComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

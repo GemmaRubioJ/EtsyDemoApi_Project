@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CBC5C7E4-FF43-493F-91D8-92F6D7CE6EDB}|Api.Service\\Api.Service.csproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\api.service\\commands\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBC5C7E4-FF43-493F-91D8-92F6D7CE6EDB}|Api.Service\\Api.Service.csproj|solutionrelative:api.service\\commands\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\promo-banner\\promo-banner.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\promo-banner\\promo-banner.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CBC5C7E4-FF43-493F-91D8-92F6D7CE6EDB}|Api.Service\\Api.Service.csproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\api.service\\commands\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBC5C7E4-FF43-493F-91D8-92F6D7CE6EDB}|Api.Service\\Api.Service.csproj|solutionrelative:api.service\\commands\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\register\\register.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\register\\register.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{682B6F29-0768-4976-B99F-F3098B96AA3E}|Api.Data\\Api.Data.csproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\api.data\\repository\\queries\\cartquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{682B6F29-0768-4976-B99F-F3098B96AA3E}|Api.Data\\Api.Data.csproj|solutionrelative:api.data\\repository\\queries\\cartquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\register\\register.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\register\\register.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{04BC676F-67F8-4B21-87E3-F29BFFEB48C6}|EtsyDemoApi\\EtsyDemoApi.csproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04BC676F-67F8-4B21-87E3-F29BFFEB48C6}|EtsyDemoApi\\EtsyDemoApi.csproj|solutionrelative:etsydemoapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\register\\register.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\register\\register.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{ABF5785F-8FDE-4CB3-BFE6-B053849F5DD4}|Api.Infraestructura\\Api.Infraestructura.csproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\api.infraestructura\\dtos\\cartitememaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABF5785F-8FDE-4CB3-BFE6-B053849F5DD4}|Api.Infraestructura\\Api.Infraestructura.csproj|solutionrelative:api.infraestructura\\dtos\\cartitememaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABF5785F-8FDE-4CB3-BFE6-B053849F5DD4}|Api.Infraestructura\\Api.Infraestructura.csproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\api.infraestructura\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABF5785F-8FDE-4CB3-BFE6-B053849F5DD4}|Api.Infraestructura\\Api.Infraestructura.csproj|solutionrelative:api.infraestructura\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABF5785F-8FDE-4CB3-BFE6-B053849F5DD4}|Api.Infraestructura\\Api.Infraestructura.csproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\api.infraestructura\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABF5785F-8FDE-4CB3-BFE6-B053849F5DD4}|Api.Infraestructura\\Api.Infraestructura.csproj|solutionrelative:api.infraestructura\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\services\\cart.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\services\\cart.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\models\\cartitemdto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\models\\cartitemdto.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|c:\\users\\gare\\onedrive - gft technologies se\\documents\\etsydemoapi_project\\etsydemoapi\\etsydemoangular\\etsydemoangular.client\\src\\app\\models\\product.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{7C5881E8-6C66-45F9-BD4C-36340E012AFD}|EtsyDemoAngular\\etsydemoangular.client\\etsydemoangular.client.esproj|solutionrelative:etsydemoangular\\etsydemoangular.client\\src\\app\\models\\product.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 269,
-          "SelectedChildIndex": 41,
+          "SelectedChildIndex": 49,
           "Children": [
             {
               "$type": "Bookmark",
@@ -194,67 +214,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "promo-banner.component.html",
-              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\promo-banner\\promo-banner.component.html",
-              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\promo-banner\\promo-banner.component.html",
-              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\promo-banner\\promo-banner.component.html",
-              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\promo-banner\\promo-banner.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-05T11:02:17.155Z",
+              "DocumentIndex": 2,
+              "Title": "CartQuery.cs",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Data\\Repository\\Queries\\CartQuery.cs",
+              "RelativeDocumentMoniker": "Api.Data\\Repository\\Queries\\CartQuery.cs",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Data\\Repository\\Queries\\CartQuery.cs",
+              "RelativeToolTip": "Api.Data\\Repository\\Queries\\CartQuery.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAowFEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:34:32.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "app.component.html",
-              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\app.component.html",
-              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\app.component.html",
-              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\app.component.html",
-              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\app.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-05T10:58:39.573Z",
+              "DocumentIndex": 1,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Service\\Commands\\CartService.cs",
+              "RelativeDocumentMoniker": "Api.Service\\Commands\\CartService.cs",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Service\\Commands\\CartService.cs",
+              "RelativeToolTip": "Api.Service\\Commands\\CartService.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAASwGcAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:30:36.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "register.component.html",
-              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.html",
-              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.html",
-              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.html",
-              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.html",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAADMAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-05T10:24:47.625Z",
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoApi\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "EtsyDemoApi\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoApi\\Controllers\\CartController.cs",
+              "RelativeToolTip": "EtsyDemoApi\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAIwF8AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:28:32.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CartItemDto.ts",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\CartItemDto.ts",
+              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\CartItemDto.ts",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\CartItemDto.ts",
+              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\CartItemDto.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-06-05T15:13:10.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Product.ts",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\Product.ts",
+              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\Product.ts",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\Product.ts",
+              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Models\\Product.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-06-05T15:10:22.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "cart.service.ts",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Services\\cart.service.ts",
+              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Services\\cart.service.ts",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Services\\cart.service.ts",
+              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\Services\\cart.service.ts",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAjwCoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-06-05T15:09:09.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Api.Infraestructura\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\Models\\Product.cs",
+              "RelativeToolTip": "Api.Infraestructura\\Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:05:19.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\DTOs\\CartItemDto.cs",
+              "RelativeDocumentMoniker": "Api.Infraestructura\\DTOs\\CartItemDto.cs",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\DTOs\\CartItemDto.cs",
+              "RelativeToolTip": "Api.Infraestructura\\DTOs\\CartItemDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:04:47.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "register.component.ts",
-              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.ts",
-              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.ts",
-              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.ts",
-              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.ts",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAgwFcAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-05T10:21:27.382Z",
+              "Title": "CartItemEmailDto.cs",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\DTOs\\CartItemEmailDto.cs",
+              "RelativeDocumentMoniker": "Api.Infraestructura\\DTOs\\CartItemEmailDto.cs",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Infraestructura\\DTOs\\CartItemEmailDto.cs",
+              "RelativeToolTip": "Api.Infraestructura\\DTOs\\CartItemEmailDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:03:47.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "register.component.css",
-              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.css",
-              "RelativeDocumentMoniker": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.css",
-              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.css",
-              "RelativeToolTip": "EtsyDemoAngular\\etsydemoangular.client\\src\\app\\register\\register.component.css",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAABsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-05T10:12:12.586Z",
+              "DocumentIndex": 0,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Service\\Commands\\EmailService.cs",
+              "RelativeDocumentMoniker": "Api.Service\\Commands\\EmailService.cs",
+              "ToolTip": "C:\\Users\\gare\\OneDrive - GFT Technologies SE\\Documents\\EtsyDemoApi_Project\\EtsyDemoApi\\Api.Service\\Commands\\EmailService.cs",
+              "RelativeToolTip": "Api.Service\\Commands\\EmailService.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAiwEcAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T15:02:47Z",
               "EditorCaption": ""
             }
           ]

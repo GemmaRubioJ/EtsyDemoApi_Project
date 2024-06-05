@@ -5,7 +5,7 @@
   padding: 20px 0;
   font-size: 14px;
   width: 100%;
-  position: sticky; /* o sticky según tu necesidad */
+  position: sticky; 
   bottom: 0;
   left: 0;
 }
@@ -20,7 +20,7 @@
 }
 
 .footer-section h4 {
-  color: #FFFFFF; /* Un color llamativo para los títulos */
+  color: #FFFFFF; 
   margin-bottom: 15px;
   font-weight: bold;
 }

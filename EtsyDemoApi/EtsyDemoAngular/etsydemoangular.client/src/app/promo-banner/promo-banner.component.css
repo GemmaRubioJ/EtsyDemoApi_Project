@@ -1,7 +1,7 @@
 /* promo-banner.component.css */
 .promo-banner {
-  height: 800px; /* Aumenta la altura */
-  width: 100%; /* Asegura que ocupa el ancho completo */
+  height: 800px; 
+  width: 100%; 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,31 +11,32 @@
 }
 
 .promo-content {
-  text-align: center; /* Centra el contenido textual si es necesario */
-  width: 100%; /* Utiliza el ancho completo para el contenido interno */
+  text-align: center; 
+  width: 100%; 
 }
 
   .promo-content button {
     padding: 12px 25px;
-    font-size: 18px; /* Tamaño de fuente moderado */
-    background-color: #f8f9fa; /* Color de fondo claro */
-    color: #CF6F0B; /* Color de texto oscuro para contraste */
-    border: 2px solid #f8f9fa; /* Borde del mismo color que el fondo */
-    border-radius: 5px; /* Esquinas redondeadas */
-    cursor: pointer; /* Cursor de mano indica interactividad */
-    transition: all 0.3s ease; /* Transición suave para hover y focus */
-    text-transform: uppercase; /* Texto en mayúsculas para más presencia */
-    letter-spacing: 1px; /* Espaciado entre letras para mejor legibilidad */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para un efecto 3D ligero */
+    font-weight: bold;
+    font-size: 18px; 
+    background-color: #f8f9fa;
+    color: #CF6F0B; 
+    border: 2px solid #f8f9fa; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
   }
 
     .promo-content button:hover, .promo-content button:focus {
-      background-color: #e9ecef; /* Color ligeramente más oscuro en hover y focus */
-      border-color: #dee2e6; /* Borde más definido en hover y focus */
-      color: #CF6F0B; /* Cambio de color de texto para destacar interactividad */
-      box-shadow: 0 0 8px rgba(0,0,0,0.15); /* Sombra más pronunciada en hover y focus */
+      background-color: #e9ecef; 
+      border-color: #dee2e6; 
+      color: #CF6F0B; 
+      box-shadow: 0 0 8px rgba(0,0,0,0.15); 
     }
 
     .promo-content button:active {
-      transform: translateY(2px); /* Efecto de pulsación al hacer clic */
+      transform: translateY(2px); 
     }

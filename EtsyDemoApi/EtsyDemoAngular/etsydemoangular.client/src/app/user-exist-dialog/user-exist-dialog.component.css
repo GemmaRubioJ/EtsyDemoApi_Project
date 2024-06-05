@@ -3,12 +3,12 @@
   text-align: center;
   padding: 20px;
   border-radius: 8px;
-  background-color: #FCF8F4; /* Fondo amarillo claro para advertencias */
+  background-color: #FCF8F4; 
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .user-exists-dialog-title {
-  color: #C2730A; /* Tono oscuro amarillo */
+  color: #C2730A; 
   font-size: 24px;
   margin-bottom: 20px;
 }

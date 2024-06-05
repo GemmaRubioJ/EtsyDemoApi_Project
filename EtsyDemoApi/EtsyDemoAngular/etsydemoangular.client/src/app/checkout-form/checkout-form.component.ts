@@ -49,7 +49,7 @@ export class CheckoutFormComponent {
       this.cartService.checkout(cartRequest).subscribe(
         response => {
           console.log('Purchase finalized', response);
-          this.router.navigate(['/']);
+          this.router.navigate(['/purchase-success']);
         },
         error => {
           console.error('Error finalizing purchase', error);

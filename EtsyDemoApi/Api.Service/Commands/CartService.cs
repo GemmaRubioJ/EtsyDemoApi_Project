@@ -101,13 +101,15 @@ namespace Api.Service.Commands
             {
                 var productName = await _cartQuery.GetProductName(product.ProductId);
                 var productPrice = await _cartQuery.GetProductPrice(product.ProductId);
+                var productImageUrl = await _cartQuery.GetProductImageUrl(product.ProductId);
 
                 cartItems.Add(new CartItemEmailDto
                 {
                     ProductId = product.ProductId,
                     Title = productName,
                     Quantity = product.Quantity,
-                    Price = productPrice
+                    Price = productPrice,
+                    ImageUrl = productImageUrl
                 });
             }
             var emailData = new EmailDataDto

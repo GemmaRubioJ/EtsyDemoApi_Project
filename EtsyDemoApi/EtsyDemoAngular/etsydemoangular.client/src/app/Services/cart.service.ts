@@ -36,10 +36,11 @@ export class CartService {
     return this.http.delete(`${this.apiUrl}/delete/${idCart}`);
   }
 
-  addToCart(productId: string, quantity: number = 1): Observable<any> {
+  addToCart(productId: string, quantity: number = 1, image: string): Observable<any> {
     const cartData = {
       productId: productId,
-      quantity: quantity
+      quantity: quantity,
+      image: image
     };
     return this.http.post(`${this.apiUrl}/register`, cartData);
   }

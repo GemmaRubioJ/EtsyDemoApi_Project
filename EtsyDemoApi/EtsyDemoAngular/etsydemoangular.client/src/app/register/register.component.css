@@ -2,13 +2,13 @@
 
 .container {
   display: flex;
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  height: 100vh; /* Usa el alto completo de la ventana del navegador */
-  width: 100vw; /* Usa el ancho completo de la ventana del navegador */
-  margin: 0; /* Elimina cualquier margen por defecto */
-  padding: 0; /* Elimina cualquier padding por defecto */
-  position: relative; /* Para asegurar centrado absoluto */
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
+  width: 100vw; 
+  margin: 0; 
+  padding: 0; 
+  position: relative; 
 }
 
 .form-container {
@@ -25,25 +25,25 @@
 }
 
 .right-col {
-  padding: 0 20px; /* Espacio superior */
+  padding: 0 20px; 
 }
 
 
 .user-details {
-  border: 2px solid #ECB779; /* Borde naranja alrededor de la columna derecha */
-  padding: 30px; /* Remueve el padding superior para alinear con el borde del título */
+  border: 2px solid #ECB779; 
+  padding: 30px; 
   border-radius: 10px;
   position: relative;
 }
 
 .submit-btn-container {
   display: flex;
-  justify-content: center; /* Centra el botón horizontalmente */
+  justify-content: center; 
 }
 
 
 
-/* Estilos para los campos de entrada del formulario */
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -52,25 +52,25 @@ input[type="password"] {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-sizing: border-box; /* Asegura que padding y border no aumenten el ancho */
-  border-color: #fff; /* Cambia el color del borde a naranja al enfocar */
-  background-color: #FCF5ED; /* Un fondo muy suave de naranja */
+  box-sizing: border-box; 
+  border-color: #fff; 
+  background-color: #FCF5ED; 
 }
 
 
 
 h1 {
-  text-align: center; /* Centra el título */
-  margin-bottom: 20px; /* Espacio debajo del título */
+  text-align: center; 
+  margin-bottom: 20px; 
 }
 
 .h2 {
-  margin-top: 0; /* Ajusta según sea necesario para alinear con el título izquierdo */
+  margin-top: 0; 
 }
 
 /* Estilos para los botones */
 button {
-  background-color: #E6973C; /* Naranja */
+  background-color: #E6973C; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -81,11 +81,11 @@ button {
   margin: 4px 2px;
   transition: background 0.3s ease;
   cursor: pointer;
-  border-radius: 20px; /* Bordes redondeados para el botón */
+  border-radius: 20px; 
 }
 
   button:hover {
-    background-color: #D77A0F; /* Un naranja más oscuro para el hover */
+    background-color: #D77A0F; 
   }
 
 

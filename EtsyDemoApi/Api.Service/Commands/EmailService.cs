@@ -48,6 +48,7 @@ namespace Api.Service.Commands
 
             var stringBuilder = new StringBuilder();
 
+            stringBuilder.Append("<meta charset='UTF-8'>");
             stringBuilder.Append("<html>");
             stringBuilder.Append("<head>");
             stringBuilder.Append("<style>");
@@ -68,10 +69,11 @@ namespace Api.Service.Commands
             stringBuilder.Append("</head>");
             stringBuilder.Append("<body>");
             stringBuilder.Append("<div class='email-container'>");
-            stringBuilder.Append("<h1>!Gracias por tu compra!</h1>");
-            stringBuilder.Append("<h3>Detalles del pedido:</h3>");
+            stringBuilder.Append("<h1>⭐ ¡Gracias por tu compra! ⭐ </h1>");
+            stringBuilder.Append("<h2>Detalles de tu pedido 📦 :</h2>");
             stringBuilder.Append("<table>");
             stringBuilder.Append("<tr>");
+            stringBuilder.Append("<th>Imagen</th>");
             stringBuilder.Append("<th>Producto</th>");
             stringBuilder.Append("<th>Cantidad</th>");
             stringBuilder.Append("<th>Precio</th>");
@@ -80,6 +82,7 @@ namespace Api.Service.Commands
             foreach (var item in cartItems)
             {
                 stringBuilder.Append("<tr class='product'>");
+                stringBuilder.AppendFormat("<td><img src='{0}' alt='Imagen del producto' style='height: 100px;'/></td>", item.ImageUrl);
                 stringBuilder.AppendFormat("<td class='product-name'>{0}</td>", item.Title);
                 stringBuilder.AppendFormat("<td class='product-quantity'>{0}</td>", item.Quantity);
                 stringBuilder.AppendFormat("<td class='product-price'>${0}</td>", item.Price);

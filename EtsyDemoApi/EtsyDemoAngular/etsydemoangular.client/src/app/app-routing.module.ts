@@ -6,13 +6,15 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { AuthGuard } from './auth.guard';
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
+import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component'; 
 
 const routes: Routes = [
   { path: 'products/:id', component: ProductDetailComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
-  { path: 'checkout', component: CheckoutFormComponent }
+  { path: 'checkout', component: CheckoutFormComponent },
+  { path: 'purchase-success', component: PurchaseSuccessComponent }
 
 ];
 

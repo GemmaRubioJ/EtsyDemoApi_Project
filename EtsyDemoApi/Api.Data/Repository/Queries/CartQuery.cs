@@ -76,5 +76,19 @@ namespace Api.Data.Repository.Queries
 
             return product;
         }
+
+        /// <summary>
+        /// Recupera la imagen de un producto por su Id
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
+        public async Task<string> GetProductImageUrl(int productId)
+        {
+            var imageUrl = await _context.Products.
+                                            Where(p => p.ProductId == productId).
+                                            Select(p => p.Image).
+                                            FirstOrDefaultAsync();
+            return imageUrl;
+        }
     }
 }

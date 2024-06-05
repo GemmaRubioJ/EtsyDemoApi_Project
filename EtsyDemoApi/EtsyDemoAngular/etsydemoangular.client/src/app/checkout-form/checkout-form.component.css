@@ -1,13 +1,13 @@
 /* Estilos generales del formulario */
 .container {
   display: flex;
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  height: 100vh; /* Usa el alto completo de la ventana del navegador */
-  width: 100vw; /* Usa el ancho completo de la ventana del navegador */
-  margin: 0; /* Elimina cualquier margen por defecto */
-  padding: 0; /* Elimina cualquier padding por defecto */
-  position: relative; /* Para asegurar centrado absoluto */
+  align-items: center; 
+  justify-content: center;
+  height: 100vh; 
+  width: 100vw; 
+  margin: 0; 
+  padding: 0; 
+  position: relative; 
 }
 
 .form-container {
@@ -25,13 +25,13 @@
 
 .row {
   display: flex;
-  justify-content: space-between; /* Espacio entre las columnas */
+  justify-content: space-between; 
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  width: 48%; /* Ajuste el porcentaje según sea necesario */
+  width: 48%; 
 }
 
 .user-details, .shipping-address {
@@ -54,13 +54,13 @@ select {
 }
 
 h1, h2 {
-  text-align: center; /* Asegura que ambos títulos estén centrados */
+  text-align: center; 
   margin-bottom: 20px;
 }
 
 .submit-btn-container {
   display: flex;
-  justify-content: center; /* Centra el botón horizontalmente */
+  justify-content: center; 
 }
 
 button {
@@ -79,11 +79,11 @@ button {
 
 @media (max-width: 600px) {
   .row {
-    flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+    flex-direction: column; 
   }
 
   .column {
-    width: 100%; /* Ajusta las columnas para pantallas pequeñas */
+    width: 100%; 
   }
 
   .form-container {
