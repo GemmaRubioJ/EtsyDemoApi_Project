@@ -25,14 +25,15 @@
 }
 
 .right-col {
-  border: 2px solid #ECB779; /* Borde naranja alrededor de la columna derecha */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 20px; /* Espacio interno para separar los contenidos del borde */
-  margin-top: 20px; /* Espacio superior para separarlo ligeramente de otros elementos */
+  padding: 0 20px; /* Espacio superior */
 }
 
+
 .user-details {
-  margin-bottom: 20px; /* Espacio debajo de los detalles del usuario para separar del botón */
+  border: 2px solid #ECB779; /* Borde naranja alrededor de la columna derecha */
+  padding: 30px; /* Remueve el padding superior para alinear con el borde del título */
+  border-radius: 10px;
+  position: relative;
 }
 
 .submit-btn-container {
@@ -40,13 +41,15 @@
   justify-content: center; /* Centra el botón horizontalmente */
 }
 
+
+
 /* Estilos para los campos de entrada del formulario */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-sizing: border-box; /* Asegura que padding y border no aumenten el ancho */
@@ -54,9 +57,15 @@ input[type="password"] {
   background-color: #FCF5ED; /* Un fondo muy suave de naranja */
 }
 
-h2 {
+
+
+h1 {
   text-align: center; /* Centra el título */
   margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.h2 {
+  margin-top: 0; /* Ajusta según sea necesario para alinear con el título izquierdo */
 }
 
 /* Estilos para los botones */
@@ -85,4 +94,8 @@ button {
     padding: 10px;
     width: 90%;
   }
+}
+
+.error-message {
+  color: #D55B10;
 }

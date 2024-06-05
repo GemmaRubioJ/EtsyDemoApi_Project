@@ -20,6 +20,8 @@ namespace Api.Infraestructura.Models
 
         // Versión de seguimiento, opcional
         public int Version { get; set; }
+
+
     }
 
     public class CartItem

@@ -4,6 +4,50 @@
         <name>Api.Service</name>
     </assembly>
     <members>
+        <member name="M:Api.Service.Commands.CartService.ProccesCheckout(Api.Domain.Request.CartRequest)">
+            <summary>
+            Verifica la validez de la solicitud y prepara los datos
+            para el envío de correo electrónico de confirmación
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Service.Commands.CartService.PrepareEmailData(Api.Domain.Request.CartRequest)">
+            <summary>
+            Prepara los detalles de correo electrónico para el checkout de la compra (detalles usuario y productos)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Service.Commands.EmailService.SendEmailAsync(System.String,System.Collections.Generic.List{Api.Infraestructura.DTOs.CartItemEmailDto})">
+            <summary>
+            Envía correo electrónico de confirmación al usuario
+            </summary>
+            <param name="userEmail"></param>
+            <param name="cartItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Service.Commands.EmailService.BuildHtmlEmailContent(System.Collections.Generic.List{Api.Infraestructura.DTOs.CartItemEmailDto})">
+            <summary>
+            Construye el contenido HTML para el correo de confirmación
+            </summary>
+            <param name="cartItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Service.Commands.UserService.LogInUserAsync(Api.Domain.Request.LogInRequest)">
+            <summary>
+            Procesa el inicio de sesión de un usuario verificando sus credenciales 
+            </summary>
+            <param name="logInRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Service.Commands.UserService.GenerateJwtToken(Api.Infraestructura.Models.User)">
+            <summary>
+            Genera un token para un usuario autenticado
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
         <member name="M:Api.Service.Queries.GetEtsyService.GetProductsAsync">
             <summary>
             Obtiene todos los productos disponibles a través de la interfaz IEtsyQuery.

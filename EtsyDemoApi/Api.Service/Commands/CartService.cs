@@ -25,6 +25,8 @@ namespace Api.Service.Commands
             _cartQuery = cartQuery;
         }
 
+
+
         public async Task<ResponseCart> CreateCartAsync(CartRequest request)
         {
 
@@ -48,6 +50,14 @@ namespace Api.Service.Commands
 
         }
 
+
+
+        /// <summary>
+        /// Verifica la validez de la solicitud y prepara los datos
+        /// para el envío de correo electrónico de confirmación
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<ResponseCheckout> ProccesCheckout(CartRequest request)
         {
             var response = new ResponseCheckout { Status = StatusType.SUCCESS };
@@ -77,6 +87,12 @@ namespace Api.Service.Commands
             return request != null && request.Products != null && request.Products.Any();
         }
 
+
+        /// <summary>
+        /// Prepara los detalles de correo electrónico para el checkout de la compra (detalles usuario y productos)
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private async Task<EmailDataDto> PrepareEmailData(CartRequest request)
         {
             var user = await _userQuery.GetUserByIdAsync((int)request.UserId);

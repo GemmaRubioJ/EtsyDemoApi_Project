@@ -13,6 +13,12 @@ namespace Api.Data.Repository.Commands
     {
         public CartRepository(ApiContext context, HttpClient httpClient) : base(context, httpClient) { }
 
+
+        /// <summary>
+        /// Crea un carrito para un usuario verificado
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<ResponseCart> CreateCartAsync(CartRequest request)
         {
             try
@@ -69,6 +75,12 @@ namespace Api.Data.Repository.Commands
         }
 
 
+        /// <summary>
+        /// Actualiza cantidades o remueve productos de un carrito
+        /// </summary>
+        /// <param name="idCart"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<ResponseCart> UpdateCartAsync (int idCart, UpdateCartRequest request)
         {
             try
@@ -126,6 +138,12 @@ namespace Api.Data.Repository.Commands
         }
 
 
+
+        /// <summary>
+        /// Elimina carrito y todos sus productos asociados
+        /// </summary>
+        /// <param name="idCart"></param>
+        /// <returns></returns>
         public async Task<ResponseCart> DeleteCartAsync(int idCart)
         {
             try

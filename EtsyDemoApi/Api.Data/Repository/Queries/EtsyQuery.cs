@@ -17,13 +17,11 @@ namespace Api.Data.Repository.Queries
 
 
         /// <summary>
-        /// Recupera todos los productos disponibles de la API externa.
-        /// Este método realiza una solicitud HTTP GET a la API y deserializa la respuesta en una lista de productos.
-        /// Si la respuesta es exitosa y contiene productos, retorna un estado de éxito con los productos;
-        /// de lo contrario, retorna un estado de error con un mensaje apropiado.
+        /// Realiza consulta HTTP para recuperar productos de Api Externa que coincidan con una cadena
+        /// de texto
         /// </summary>
-        /// <returns>Una tarea que resulta en un objeto ResponseProducts que contiene el estado de la operación,
-        /// los productos recuperados y un mensaje descriptivo.</returns>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public async Task<ResponseProducts> GetProductsByNameAsync(string name)
         {
             try
@@ -62,13 +60,9 @@ namespace Api.Data.Repository.Queries
         }
 
         /// <summary>
-        /// Busca productos por nombre en la API externa.
-        /// Realiza una solicitud HTTP GET, filtra los productos por el nombre proporcionado y maneja la respuesta.
-        /// Si no encuentra productos con el nombre especificado, retorna un error; si encuentra, retorna éxito.
+        /// Obtiene todos los productos de la Api externa 
         /// </summary>
-        /// <param name="name">El nombre del producto a buscar.</param>
-        /// <returns>Una tarea que resulta en un objeto ResponseProducts que contiene el estado de la operación,
-        /// los productos filtrados y un mensaje descriptivo.</returns>
+        /// <returns></returns>
         public async Task<ResponseProducts> GetAllProductsAsync()
         {
             try
@@ -116,6 +110,12 @@ namespace Api.Data.Repository.Queries
             return _responseProducts;
         }
 
+
+        /// <summary>
+        /// Recupera producto de la Api externa que coincida con un Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ResponseProduct> GetProductByIdAsync(int id)
         {
             try

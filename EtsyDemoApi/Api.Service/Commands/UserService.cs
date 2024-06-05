@@ -23,18 +23,19 @@ namespace Api.Service.Commands
             _etsyRepository = etsyRepository;
         }
 
+
+
         public async Task<ResponseUser> CreateUserAsync(RegisterUserRequest registerUserRequest)
         {
-            ResponseUser response = new ResponseUser { Status = StatusType.SUCCESS };
-            if (response.Status == StatusType.ERROR)
-            {
-                return response;
-            }
-            response = await _etsyRepository.RegisterUserAsync(registerUserRequest);
-            return response;
-
+            return await _etsyRepository.RegisterUserAsync(registerUserRequest);
         }
 
+
+        /// <summary>
+        /// Procesa el inicio de sesión de un usuario verificando sus credenciales 
+        /// </summary>
+        /// <param name="logInRequest"></param>
+        /// <returns></returns>
         public async Task<ResponseUserToken> LogInUserAsync(LogInRequest logInRequest)
         {
             ResponseUserToken response = await _userQuery.LogInUserAsync(logInRequest);
@@ -50,6 +51,13 @@ namespace Api.Service.Commands
 
         }
 
+
+
+        /// <summary>
+        /// Genera un token para un usuario autenticado
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         private string GenerateJwtToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();

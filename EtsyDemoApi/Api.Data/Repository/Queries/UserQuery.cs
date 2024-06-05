@@ -16,6 +16,11 @@ namespace Api.Data.Repository.Queries
         public UserQuery(HttpClient httpclient, ApiContext context) : base(httpclient, context) { }
 
 
+
+        /// <summary>
+        /// Obtiene todos los usuarios de una Api Externa
+        /// </summary>
+        /// <returns></returns>
         public async Task<ResponseUsers> GetUsersAsync()
         {
             try
@@ -53,13 +58,22 @@ namespace Api.Data.Repository.Queries
             return _responseUsers;
         }
 
+
+        /// <summary>
+        /// Inserta una colección de usuarios en base de datos
+        /// </summary>
+        /// <param name="users"></param>
+        /// <returns></returns>
         public async Task SaveUsersAsync(IEnumerable<User> users)
         {
             _context.Users.AddRange(users);
             await _context.SaveChangesAsync();
         }
 
-
+        /// <summary>
+        /// Recupera todos los correos de los usuarios almacenados 
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<string>> GetExistingUserEmailsAsync()
         {
             // Utilizamos AsNoTracking porque no necesitamos realizar operaciones de actualización sobre estos objetos, 
@@ -69,23 +83,46 @@ namespace Api.Data.Repository.Queries
                                        .ToListAsync();
         }
 
+
+        /// <summary>
+        /// Busca un usuario por su correo y su nombre de usuario
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="username"></param>
+        /// <returns></returns>
         public async Task<User> GetUserByEmailOrUsernameAsync(string email, string username)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email || u.Username == username);
         }
 
+
+        /// <summary>
+        /// Busca un usuario por su Email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public async Task<User> GetUserByEmail(string email)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
 
+
+        /// <summary>
+        /// Busca un usuario por su Id
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public async Task<User> GetUserByIdAsync(int userId)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
         }
 
 
-
+        /// <summary>
+        /// Verifica las credenciales de un usuario para iniciar sesión
+        /// </summary>
+        /// <param name="logInRequest"></param>
+        /// <returns></returns>
         public async Task<ResponseUserToken> LogInUserAsync(LogInRequest logInRequest)
         {
             try

@@ -1,9 +1,11 @@
 import { Component, OnInit, ChangeDetectorRef, Inject } from '@angular/core';
 import { ProductService } from '../Services/product.service';
 import { Product } from '../Models/Product';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CartService } from '../Services/cart.service';
+import { UserAuthService } from '../Services/user-auth.service';
 import { CartItem } from '../Models/CartItem';
+import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
 
 @Component({
   selector: 'app-product-detail',
@@ -18,6 +20,8 @@ export class ProductDetailComponent implements OnInit {
     private productService: ProductService,
     private cartService: CartService,
     private cd: ChangeDetectorRef,
+    private authService: UserAuthService, 
+    private dialog: MatDialog,
     public dialogRef: MatDialogRef<ProductDetailComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
@@ -52,20 +56,28 @@ export class ProductDetailComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
-    let cart: CartItem[] = JSON.parse(localStorage.getItem('cart') || '[]');
-    const index = cart.findIndex(item => item.productId === product.productId);
-
-    if (index === -1) {
-      const newItem: CartItem = {
-        ...product,
-        quantity: 1  // cantidad inicial
-      };
-      cart.push(newItem);
+    if (!this.authService.isLoggedIn()) {
+      // Usuario no logueado, mostrar modal de autenticación
+      this.dialog.open(AuthDialogComponent, {
+        width: '300px',
+        height:'200px',
+        data: { message: 'Por favor, inicie sesión o registrese para añadir productos al carrito.' }
+      });
     } else {
-      cart[index].quantity += 1;  // incrementar la cantidad si ya está en el carrito
-    }
+      // Usuario logueado, añadir producto al carrito
+      let cart: CartItem[] = JSON.parse(localStorage.getItem('cart') || '[]');
+      const index = cart.findIndex(item => item.productId === product.productId);
 
-    localStorage.setItem('cart', JSON.stringify(cart));
-    this.closeDialog();
+      if (index === -1) {
+        const newItem: CartItem = { ...product, quantity: 1 };
+        cart.push(newItem);
+      } else {
+        cart[index].quantity += 1;
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      this.closeDialog();
+    }
   }
+  
 }

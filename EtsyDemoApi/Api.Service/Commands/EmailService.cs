@@ -20,6 +20,13 @@ namespace Api.Service.Commands
             _client = new SendGridClient(apiKey);
         }
 
+
+        /// <summary>
+        /// Envía correo electrónico de confirmación al usuario
+        /// </summary>
+        /// <param name="userEmail"></param>
+        /// <param name="cartItems"></param>
+        /// <returns></returns>
         public async Task SendEmailAsync(string userEmail, List<CartItemEmailDto> cartItems)
         {
             var subject = "Confirmación de tu compra";
@@ -29,6 +36,12 @@ namespace Api.Service.Commands
             // Puedes manejar la respuesta de SendGrid según necesites
         }
 
+
+        /// <summary>
+        /// Construye el contenido HTML para el correo de confirmación
+        /// </summary>
+        /// <param name="cartItems"></param>
+        /// <returns></returns>
         private string BuildHtmlEmailContent(List<CartItemEmailDto> cartItems)
         {
             var totalPrice = cartItems.Sum(item => item.Price * item.Quantity);

@@ -22,7 +22,11 @@ namespace Api.Data.Repository.Commands
         
 
 
-
+        /// <summary>
+        /// Registra nuevo ususario si no existe
+        /// </summary>
+        /// <param name="registerUserRequest"></param>
+        /// <returns></returns>
         public async Task<ResponseUser> RegisterUserAsync(RegisterUserRequest registerUserRequest)
         {
             var existingUser = await _userQuery.GetUserByEmailOrUsernameAsync(registerUserRequest.Email, registerUserRequest.Username);

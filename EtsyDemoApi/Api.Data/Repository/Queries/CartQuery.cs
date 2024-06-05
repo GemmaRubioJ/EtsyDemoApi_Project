@@ -12,6 +12,12 @@ namespace Api.Data.Repository.Queries
     {
         public CartQuery(ApiContext context, HttpClient httpClient) : base(context, httpClient) { }
 
+
+        /// <summary>
+        /// Recupera un carrito por su Id
+        /// </summary>
+        /// <param name="idUser"></param>
+        /// <returns></returns>
         public async Task<ResponseCart> GetCartAsync(int idUser)
         {
             try
@@ -39,6 +45,12 @@ namespace Api.Data.Repository.Queries
             return _responseCart;
         }
 
+
+        /// <summary>
+        /// Recupera el nombre de un producto por su Id
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
         public async Task<string> GetProductName(int productId)
         {
             var product =  await _context.Products.
@@ -49,6 +61,12 @@ namespace Api.Data.Repository.Queries
             return product;
         }
 
+
+        /// <summary>
+        /// Recupera el precio de un producto por su Id
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
         public async Task<decimal> GetProductPrice(int productId)
         {
             var product = await _context.Products.
